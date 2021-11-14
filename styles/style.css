@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Genos:wght@100&family=Montserrat+Alternates:wght@700&display=swap");
+/* Variables */
+/* CSS RESET */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Set rem size */
+html {
+  font-size: 10px;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  background-color: #0d203d;
+  font-family: "Abel", Tahoma;
+}
+
+header {
+  position: fixed;
+  top: 0px;
+  padding: 1rem 2rem;
+  background-color: #0d203d;
+  width: 100%;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+nav {
+  font-size: 2rem;
+}
+nav a.logo {
+  font-family: "Genos", Georgia;
+  font-size: 6rem;
+  color: #AFF75C;
+  text-decoration: none;
+}
+nav ol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  counter-reset: nav-item;
+}
+nav ol li {
+  padding: 1rem 2rem;
+  counter-increment: nav-item;
+}
+nav ol li a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: #F5F7FA;
+  overflow: hidden;
+}
+nav ol li a::before {
+  content: counter(nav-item) ".";
+  margin-right: 1rem;
+  color: #AFF75C;
+}
+nav ol li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: #AFF75C;
+  opacity: 1;
+  transform: translate3d(-100%, 0, 0);
+  transition: transform 0.3s;
+}
+nav ol li a:hover, nav ol li a:focus {
+  color: #AFF75C;
+}
+nav ol li a:hover::after, nav ol li a:focus::after {
+  transform: translate3d(0, 0, 0);
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn {
+  padding: 1rem 1.5rem;
+  border: solid 1px #AFF75C;
+  border-radius: 1rem;
+  background: none;
+  color: #AFF75C;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: background-color 0.25s ease-in-out;
+}
+.btn * {
+  padding: 0 0.5rem;
+}
+.btn:hover, .btn:focus {
+  background-color: rgba(174, 247, 89, 0.1);
+}
+
+.btn-large {
+  font-size: 2rem;
+  padding: 2rem 3rem;
+}
+
+main {
+  min-height: 100vh;
+  max-width: 1400px;
+  width: 100%;
+  padding: 0 15rem;
+}
+main .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0 auto;
+  color: #E4E7EB;
+  font-size: 2rem;
+}
+main .hero h1 {
+  font-weight: 100;
+  color: #F5F7FA;
+}
+main .hero h2, main .hero h3 {
+  font-family: "Montserrat Alternates", Arial;
+}
+main .hero h3 {
+  font-size: 4rem;
+  margin-top: 1rem;
+  color: #F5F7FA;
+}
+main .hero p {
+  margin-top: 2rem;
+  width: 60%;
+}
+main .hero a {
+  margin-top: 4rem;
+}
+
+.large-heading {
+  font-size: 9rem;
+  color: #AFF75C;
+}/*# sourceMappingURL=style.css.map */
