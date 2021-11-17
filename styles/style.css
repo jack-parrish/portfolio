@@ -83,17 +83,25 @@ html {
     scroll-behavior: auto !important;
   }
 }
+html {
+  scrollbar-color: #486581 rgba(0, 0, 0, 0);
+}
+
 body {
   background-color: #0d203d;
   font-family: "Abel", Tahoma;
+  overflow-x: hidden;
 }
 
 header {
   position: fixed;
   top: 0px;
-  padding: 1rem 2rem;
-  background-color: #0d203d;
+  padding: 0rem 2rem;
+  background-color: rgba(13, 33, 63, 0.85);
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
   width: 100%;
+  z-index: 11;
 }
 header nav {
   display: flex;
@@ -109,7 +117,7 @@ nav {
 nav a.logo {
   font-family: "Genos", Georgia;
   font-size: 6rem;
-  color: #AFF75C;
+  color: #51CA58;
   text-decoration: none;
 }
 nav ol {
@@ -126,13 +134,13 @@ nav ol li a {
   display: block;
   position: relative;
   text-decoration: none;
-  color: #F5F7FA;
+  color: #F0F4F8;
   overflow: hidden;
 }
 nav ol li a::before {
   content: counter(nav-item) ".";
   margin-right: 1rem;
-  color: #AFF75C;
+  color: #51CA58;
 }
 nav ol li a::after {
   content: "";
@@ -141,13 +149,13 @@ nav ol li a::after {
   left: 0;
   width: 100%;
   height: 0.1em;
-  background-color: #AFF75C;
+  background-color: #51CA58;
   opacity: 1;
   transform: translate3d(-100%, 0, 0);
   transition: transform 0.3s;
 }
 nav ol li a:hover, nav ol li a:focus {
-  color: #AFF75C;
+  color: #51CA58;
 }
 nav ol li a:hover::after, nav ol li a:focus::after {
   transform: translate3d(0, 0, 0);
@@ -159,10 +167,10 @@ button {
 
 .btn {
   padding: 1rem 1.5rem;
-  border: solid 1px #AFF75C;
+  border: solid 1px #51CA58;
   border-radius: 1rem;
   background: none;
-  color: #AFF75C;
+  color: #51CA58;
   text-decoration: none;
   display: flex;
   justify-content: space-evenly;
@@ -173,7 +181,7 @@ button {
   padding: 0 0.5rem;
 }
 .btn:hover, .btn:focus {
-  background-color: rgba(174, 247, 89, 0.1);
+  background-color: rgba(79, 201, 86, 0.1);
 }
 
 .btn-large {
@@ -186,6 +194,13 @@ main {
   max-width: 1400px;
   width: 100%;
   padding: 0 15rem;
+  counter-reset: section;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main section:last-child {
+  margin-bottom: 50rem;
 }
 main .hero {
   display: flex;
@@ -193,31 +208,84 @@ main .hero {
   justify-content: center;
   align-items: flex-start;
   min-height: 100vh;
-  margin: 0 auto;
-  color: #E4E7EB;
+}
+main .hero .intro {
+  font-weight: 100;
+  color: #F0F4F8;
   font-size: 2rem;
 }
-main .hero h1 {
-  font-weight: 100;
-  color: #F5F7FA;
-}
-main .hero h2, main .hero h3 {
-  font-family: "Montserrat Alternates", Arial;
-}
-main .hero h3 {
+main .hero .subtitle {
   font-size: 4rem;
   margin-top: 1rem;
-  color: #F5F7FA;
+  color: #F0F4F8;
+  width: 100%;
 }
 main .hero p {
-  margin-top: 2rem;
   width: 60%;
 }
 main .hero a {
   margin-top: 4rem;
 }
 
+p, ol {
+  margin-top: 2rem;
+  color: #D9E2EC;
+  font-size: 2rem;
+}
+
 .large-heading {
   font-size: 9rem;
-  color: #AFF75C;
+  color: #51CA58;
+}
+
+.title-font {
+  font-family: "Montserrat Alternates", Arial;
+}
+
+.heading-with-number {
+  font-size: 3.5rem;
+  color: #F0F4F8;
+  counter-increment: section;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.heading-with-number::before {
+  content: counter(section) ".";
+  margin-right: 1.5rem;
+  color: #51CA58;
+}
+.heading-with-number::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 30rem;
+  height: 1px;
+  margin-left: 2rem;
+  background-color: #486581;
+}
+
+section[id]::before {
+  content: "";
+  display: block;
+  height: 10rem;
+}
+
+#about {
+  max-width: 90rem;
+}
+#about .about-container {
+  display: flex;
+}
+#about .about-container .about-text {
+  flex: 3;
+}
+#about .about-container .about-image {
+  margin-left: 5rem;
+  flex: 2;
+}
+#about .about-container .about-image img {
+  border-radius: 1rem;
+  box-shadow: 0.2rem 0.5rem 0.5rem #243B53;
+  margin-bottom: 5rem;
 }/*# sourceMappingURL=style.css.map */
