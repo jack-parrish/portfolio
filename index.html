@@ -52,55 +52,67 @@
         </section>
         
         <section id="projects">
-            <div class="background"></div>
-            <h2 class="heading-with-number">Some Things I've Worked On</h2>
-            <ul role="list">
-                <li class="project">
-                    <p class="project-type">UX Case Study</p>
-                    <h3 class="project-header">Radiance</h3>
-                    <p class="project-description">Radiance is a mobile app & responsive website that aims to break down the barriers to healthy eating such as cost and time.  Given the complex nature of the problem, I focused on understanding the context in which users may interact with Radiance.  This was my third project in Google's UX Design Professional Certificate program.</p>
-                    <p class="project-duration">October 2021</p>
-                    <ul class="project-skills">
-                        <li>UX Research</li>
-                        <li>Product Design</li>
-                        <li>Sketch</li>
-                    </ul>
-                    <a href="/radiance" class="btn">Learn more</a>
-                    <a href="/radiance">
-                        <img src="./content/radiance/radiance-thumbnail.png" alt="Project mockups">
-                    </a>
-                </li>
-                <li class="project">
-                    <p class="project-type">UX Case Study</p>
-                    <h3 class="project-header">Minigame Madness</h3>
-                    <p class="project-description">Minigame Madness is my second project in Google's UX Design Professional Certificate program.  I designed this responsive website to help build relationships among team members and friends in a fun and engaging way.  I had a lot of fun thinking of different games for the website and designing the layout of the different pages.</p>
-                    <p class="project-duration">September 2021 - October 2021</p>
-                    <ul class="project-skills">
-                        <li>Product Design</li>
-                        <li>UX Research</li>
-                        <li>Adobe XD</li>
-                    </ul>
-                    <a href="/minigamemadness" class="btn">Learn more</a>
-                    <a href="/minigamemadness">
-                        <img src="./content/minigamemadness/minigames-thumbnail.png" alt="Project mockups">
-                    </a>
-                </li>
-                <li class="project">
-                    <p class="project-type">UX Case Study</p>
-                    <h3 class="project-header">PathWayfinders</h3>
-                    <p class="project-description">My first ever case study!  PathWayfinders is a mobile app that gives step-by-step navigation indoors and outdoors, to help bridge the gap between getting to the right building and getting to the right room within.  I learned so much about about the user-centered design process building this project throughout the first five courses of Google's UX Design Professional Certificate program.</p>
-                    <p class="project-duration">April 2021 - July 2021</p>
-                    <ul class="project-skills">
-                        <li>UX Research</li>
-                        <li>Product Design</li>
-                        <li>Figma</li>
-                    </ul>
-                    <a href="/pathwayfinders" class="btn">Learn more</a>
-                    <a href="/pathwayfinders">
-                        <img src="./content/pathwayfinders/pathwayfinders-thumbnail.png" alt="Project mockups">
-                    </a>
-                </li>
-            </ul>
+            <div class="projects-container">
+                <header>
+                    <h2 class="heading-with-number">Some Things I've Worked On</h2>
+                    <div class="project-filter">
+                        <label for="project-type">Project Type:</label>
+                        <select name="project-type" id="project-type">
+                            <option value="all" selected>All</option>
+                            <option value="ux">UX Case Study</option>
+                            <option value="webDev">Web Development</option>
+                        </select>
+                    </div>
+                </header>
+                <ul role="list">
+                    <li class="project">
+                        <p class="project-type">UX Case Study</p>
+                        <h3 class="project-header">Radiance</h3>
+                        <p class="project-description">Radiance is a mobile app & responsive website that aims to break down the barriers to healthy eating such as cost and time.  Given the complex nature of the problem, in this project I focused on getting a deep understanding the context in which users may interact with Radiance.  This was my third project in Google's UX Design Professional Certificate program.</p>
+                        <p class="project-duration">October 2021</p>
+                        <ul class="project-skills">
+                            <li>UX Research</li>
+                            <li>Product Design</li>
+                            <li>Sketch</li>
+                        </ul>
+                        <a href="/radiance" class="btn">Learn more</a>
+                        <a href="/radiance">
+                            <img src="./content/radiance/radiance-thumbnail.png" alt="Project mockups">
+                        </a>
+                    </li>
+                    <li class="project">
+                        <p class="project-type">UX Case Study</p>
+                        <h3 class="project-header">Minigame Madness</h3>
+                        <p class="project-description">Minigame Madness is my second project in Google's UX Design Professional Certificate program.  I designed this responsive website to help build relationships among team members and friends in a fun and engaging way.  I wanted to push myself in designing the look and feel of the site, and I had a lot of fun thinking of different games and features for the website.</p>
+                        <p class="project-duration">September 2021 - October 2021</p>
+                        <ul class="project-skills">
+                            <li>Product Design</li>
+                            <li>UX Research</li>
+                            <li>Adobe XD</li>
+                        </ul>
+                        <a href="/minigamemadness" class="btn">Learn more</a>
+                        <a href="/minigamemadness">
+                            <img src="./content/minigamemadness/minigames-thumbnail.png" alt="Project mockups">
+                        </a>
+                    </li>
+                    <li class="project">
+                        <p class="project-type">UX Case Study</p>
+                        <h3 class="project-header">PathWayfinders</h3>
+                        <p class="project-description">My first ever case study!  PathWayfinders is a mobile app that gives step-by-step navigation indoors and outdoors, to help bridge the gap between getting to the right building and getting to the right room within.  I learned so much about about the user-centered design process building this project throughout the first five courses of Google's UX Design Professional Certificate program.</p>
+                        <p class="project-duration">April 2021 - July 2021</p>
+                        <ul class="project-skills">
+                            <li>UX Research</li>
+                            <li>Product Design</li>
+                            <li>Figma</li>
+                        </ul>
+                        <a href="/pathwayfinders" class="btn">Learn more</a>
+                        <a href="/pathwayfinders">
+                            <img src="./content/pathwayfinders/pathwayfinders-thumbnail.png" alt="Project mockups">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
         </section>
 
         <section id="experience">

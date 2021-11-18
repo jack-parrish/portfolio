@@ -97,7 +97,7 @@ header {
   position: fixed;
   top: 0px;
   padding: 0rem 2rem;
-  background-color: rgba(13, 33, 63, 0.85);
+  background-color: rgba(13, 33, 63, 0.9);
   -webkit-backdrop-filter: blur(1rem);
           backdrop-filter: blur(1rem);
   width: 100%;
@@ -151,7 +151,7 @@ nav ol li a::after {
   height: 0.1em;
   background-color: #51CA58;
   opacity: 1;
-  transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-101%, 0, 0);
   transition: transform 0.3s;
 }
 nav ol li a:hover, nav ol li a:focus {
@@ -175,7 +175,9 @@ button {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  transition: background-color 0.25s ease-in-out;
+  transition-property: background-color, color;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
 }
 .btn * {
   padding: 0 0.5rem;
@@ -191,7 +193,6 @@ button {
 
 main {
   min-height: 100vh;
-  max-width: 1400px;
   width: 100%;
   padding: 0 15rem;
   counter-reset: section;
@@ -208,6 +209,7 @@ main .hero {
   justify-content: center;
   align-items: flex-start;
   min-height: 100vh;
+  max-width: 110rem;
 }
 main .hero .intro {
   font-weight: 100;
@@ -253,7 +255,10 @@ p, ol {
 .heading-with-number::before {
   content: counter(section) ".";
   margin-right: 1.5rem;
+  padding: 0.5rem 1.6rem 0.5rem 2rem;
   color: #51CA58;
+  background-color: #0d203d;
+  border-radius: 50%;
 }
 .heading-with-number::after {
   content: "";
@@ -265,6 +270,9 @@ p, ol {
   background-color: #486581;
 }
 
+section[id] {
+  margin-bottom: 10rem;
+}
 section[id]::before {
   content: "";
   display: block;
@@ -288,4 +296,52 @@ section[id]::before {
   border-radius: 1rem;
   box-shadow: 0.2rem 0.5rem 0.5rem #243B53;
   margin-bottom: 5rem;
+}
+
+#projects {
+  width: 100vw;
+  background-color: #fff;
+}
+
+.projects-container {
+  max-width: 120rem;
+  margin: auto;
+}
+.projects-container h2, .projects-container h3, .projects-container p, .projects-container li {
+  color: #102A43;
+}
+.projects-container header {
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+  margin-bottom: 6rem;
+}
+
+.project {
+  display: grid;
+}
+.project .btn {
+  background-color: #51CA58;
+  color: #102A43;
+  border: none;
+}
+.project .btn:hover {
+  background-color: #0d203d;
+  color: #F0F4F8;
+}
+
+.project-filter {
+  display: none;
+  align-items: center;
+}
+.project-filter label {
+  font-size: 1.6rem;
+  margin-right: 1rem;
+}
+.project-filter select {
+  font-size: 1.6rem;
+  padding: 1rem;
 }/*# sourceMappingURL=style.css.map */

@@ -4,6 +4,8 @@
 /* Variables */
 $background-color: #0d203d;
 $primary-color: #51CA58;
+$primary-dark: #014807;
+$primary-light: #E3F9E5;
 $grey-9: #F0F4F8;
 $grey-8: #D9E2EC;
 $grey-7: #BCCCDC;
@@ -112,7 +114,7 @@ header {
   position: fixed;
   top: 0px;
   padding: 0rem 2rem;
-  background-color: hsla(216, 65%, 15%,85%);
+  background-color: hsla(216, 65%, 15%,90%);
   backdrop-filter: blur(1rem);
   width: 100%;
   z-index: 11;
@@ -169,7 +171,7 @@ nav {
           height: 0.1em;
           background-color: $primary-color;
           opacity: 1;
-          transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-101%, 0, 0);
           transition: transform .3s;
         }
 
@@ -205,7 +207,9 @@ button {
     padding: 0 .5rem;
   }
 
-  transition: background-color .25s ease-in-out;
+  transition-property: background-color, color; 
+  transition-duration: .25s;
+  transition-timing-function: ease-in-out;
 
   &:hover,&:focus {
     background-color: hsla(123, 53%, 55%, 10%);
@@ -219,7 +223,6 @@ button {
 
 main {
   min-height: 100vh;
-  max-width: 1400px;
   width: 100%;
   padding: 0 15rem;
   counter-reset: section;
@@ -237,6 +240,7 @@ main {
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
+    max-width: 110rem;
 
 
     .intro {
@@ -288,7 +292,10 @@ p,ol {
   &::before {
     content: counter(section) ".";
     margin-right: 1.5rem;
+    padding: .5rem 1.6rem .5rem 2rem;
     color: $primary-color;
+    background-color: $background-color;
+    border-radius: 50%;
   }
 
   &::after {
@@ -303,6 +310,8 @@ p,ol {
 }
 
 section[id] {
+  margin-bottom: 10rem;
+
   &::before {
     content: '';
     display: block;
@@ -331,5 +340,60 @@ section[id] {
     }
   }
 }
+
+#projects {
+  width: 100vw;
+  background-color: #fff;
+}
+
+.projects-container {
+  max-width: 120rem;
+  margin: auto;
+
+  h2,h3,p,li {
+    color: $grey-1;
+  }
+
+  header {
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+    margin-bottom: 6rem;
+  }
+}
+
+.project {
+  display: grid;
+  
+  .btn {
+    background-color: $primary-color;
+    color: $grey-1;
+    border: none;
+
+    &:hover {
+      background-color:$background-color;
+      color: $grey-9;
+    }
+  }
+}
+
+.project-filter {
+  // display: flex;
+  display: none;
+  align-items: center;
+
+  label {
+    font-size: 1.6rem;
+    margin-right: 1rem;
+  }
+  select {
+    font-size: 1.6rem;
+    padding: 1rem;
+  }
+}
+
 
 
