@@ -231,7 +231,7 @@ main {
   align-items: center;
 
   section:last-child {
-    margin-bottom: 50rem;
+    margin-bottom: 20rem;
   }
 
   .hero {
@@ -344,6 +344,7 @@ section[id] {
 #projects {
   width: 100vw;
   background-color: #fff;
+  margin-bottom: 0;
 }
 
 .projects-container {
@@ -361,7 +362,7 @@ section[id] {
     justify-content: space-between;
     align-items: center;
     z-index: 5;
-    margin-bottom: 6rem;
+    margin-bottom: 10rem;
   }
 
   ul {
@@ -375,7 +376,7 @@ section[id] {
   grid-template-rows: repeat(5, 20%);
   column-gap: 5rem;
   row-gap: 2rem;
-  margin-bottom: 10rem;
+  margin-bottom: 15rem;
 
   
   .btn {
@@ -388,7 +389,7 @@ section[id] {
     padding: 2rem;
     font-size: 2rem;
     font-weight: 900;
-    box-shadow: .2rem .4rem .4rem $grey-3;
+    box-shadow: .1rem .2rem .2rem $grey-3;
 
     &:hover {
       background-color:$background-color;
@@ -417,6 +418,20 @@ section[id] {
     font-size: 4rem;
     font-weight: bold;
   }
+
+// .project-filter {
+//   display: flex;
+//   align-items: center;
+
+//   label {
+//     font-size: 1.6rem;
+//     margin-right: 1rem;
+//   }
+//   select {
+//     font-size: 1.6rem;
+//     padding: 1rem;
+//   }
+// }
 
   .project-description {
     grid-column: 6 / 11;
@@ -449,22 +464,125 @@ section[id] {
       max-height: 60rem;
     }
   }
+  
+  &#minigame-madness {
+    grid-template-rows: repeat(8, 12.5%);
+    grid-template-columns: repeat(12, 1fr);
+    row-gap: 3.5rem;
+    column-gap: 1rem;
 
+    header {
+      grid-column: 1 / 5;
+      grid-row: 1;
+      align-items: flex-start;
+    }
+
+    .project-thumbnail {
+      grid-row: 2 / 6;
+      grid-column: 2 / 12;
+      margin-bottom: 2rem;
+    }
+
+    .project-description {
+      grid-column: 1 / 8;
+      grid-row: 6 / 9;
+    }
+
+    .project-skills {
+      grid-column: 9 / 13;
+      grid-row: 6 / 8;
+      align-self: center;
+    }
+
+    .btn {
+      grid-column: 11 / 13;
+      grid-row: 8 / 9;
+    }
+  }
+
+  &#pathwayfinders {
+    column-gap: 0;
+
+    .project-description {
+      grid-column: 7 / 11;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 5rem;
+  }
 }
 
-// .project-filter {
-//   display: flex;
-//   align-items: center;
+#experience {
+  max-width: 100rem;
 
-//   label {
-//     font-size: 1.6rem;
-//     margin-right: 1rem;
-//   }
-//   select {
-//     font-size: 1.6rem;
-//     padding: 1rem;
-//   }
-// }
+  .heading-with-number {
+    margin-bottom: 5rem;
+  }
+}
+
+.job {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 10rem max-content;
 
 
+  h3 {
+    grid-column: 1 / 6;
+    grid-row: 1;
+    align-self: center;
+    font-size: 3rem;
+    color: $grey-9;
+  }
+
+  .duration {
+    grid-column: 5 / 9;
+    grid-row: 1;
+    align-self: center;
+    justify-self: end;
+    font-size: 1.8rem;
+    margin: 0;
+  }
+
+  ul {
+    grid-column: 1 / 6;
+    grid-row: 2;
+    font-size: 2rem;
+    color: $grey-9;
+
+    li {
+      padding: 1rem;
+    }
+  }
+
+  &:first-child {
+    margin-bottom: 5rem;
+  }
+}
+
+.job-title {
+  color: $primary-color;
+}
+
+#contact {
+  max-width: 70rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    margin-top: 5rem;
+    width: 30rem;
+  }
+}
+
+.heading {
+  margin: 3rem 0;
+  font-size: 3rem;
+}
 
