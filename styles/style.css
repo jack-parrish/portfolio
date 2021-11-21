@@ -271,7 +271,7 @@ p, ol {
 }
 
 section[id] {
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 section[id]::before {
   content: "";
@@ -327,7 +327,7 @@ section[id]::before {
 .project {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(5, 20%);
+  grid-template-rows: repeat(5, auto);
   -moz-column-gap: 5rem;
        column-gap: 5rem;
   row-gap: 2rem;
@@ -393,7 +393,7 @@ section[id]::before {
   max-height: 60rem;
 }
 .project#minigame-madness {
-  grid-template-rows: repeat(8, 12.5%);
+  grid-template-rows: repeat(8, auto);
   grid-template-columns: repeat(12, 1fr);
   row-gap: 3.5rem;
   -moz-column-gap: 1rem;
@@ -402,6 +402,7 @@ section[id]::before {
 .project#minigame-madness header {
   grid-column: 1/5;
   grid-row: 1;
+  align-self: center;
   align-items: flex-start;
 }
 .project#minigame-madness .project-thumbnail {
@@ -425,6 +426,7 @@ section[id]::before {
 .project#pathwayfinders {
   -moz-column-gap: 0;
        column-gap: 0;
+  margin-bottom: 7rem;
 }
 .project#pathwayfinders .project-description {
   grid-column: 7/11;
@@ -445,6 +447,7 @@ section[id]::before {
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: 10rem -webkit-max-content;
   grid-template-rows: 10rem max-content;
+  margin-bottom: 5rem;
 }
 .job h3 {
   grid-column: 1/6;
@@ -470,8 +473,8 @@ section[id]::before {
 .job ul li {
   padding: 1rem;
 }
-.job:first-child {
-  margin-bottom: 5rem;
+.job:last-child {
+  margin-bottom: 0;
 }
 
 .job-title {
