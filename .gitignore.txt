@@ -1,0 +1,3 @@
+# Ignore css and css map files.  Changes tracked in scss files.
+*.css
+*.css.map
