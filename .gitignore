@@ -1,3 +1,5 @@
 # Ignore css and css map files.  Changes tracked in scss files.
 /styles/*.css
 /styles/*.css.map
+.DS_Store
+content/.DS_Store

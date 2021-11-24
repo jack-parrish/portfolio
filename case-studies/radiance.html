@@ -29,22 +29,20 @@
                 <ul class="project-metadata" role="list">
                     <li>When I worked on this: <p class="text-bold">September 2021 - October 2021</p></li>
                     <li>My role: <p class="text-bold">UX Research, Product Design</p></li>
-                    <!-- <li>My tools: <p class="text-bold">Sketch, Miro</p></li> -->
-                    <!-- <li>Context: <span class="text-bold">Conceptual case study for Google's UX Design Professional Certificate</span></li> -->
                     <li>Requirements: <p class="text-bold">Design a mobile app + responsive website</p></li>
                 </ul>
                 <a href="#" class="btn btn-large btn-primary">Check it out!</a>
             </div>
             <img src="/content/radiance/radiance-thumbnail.png" alt="Radiance screen mockups">
         </section>
-        <section id="background">
+        <section id="background" class="flex-container-y">
             <h2>What's the business need?</h2>
             <p>According to the CDC, fewer than 1 in 7 eat enough fruit and an even smaller proportion eat enough vegetables.</p>
             <p>At the same time, there is data to suggest that adults do want to eat healthier.  The nutrition industry is growing at a 6.6% clip per year and is projected to reach $465.4 billion by 2025.</p>
             <p><strong>An app that helps alleviate the struggles with eating healthy has potential to help a lot of people and be a successful product.</strong></p>
         </section>
         <section id="research">
-            <h2>So why do many adults struggle to eat healthy, and how might we help make it easier?</h2>
+            <h2>So why do many adults struggle to eat healthy?</h2>
             <p>My initial hypothesis based on existing studies and research I found was that cost and perceived taste were the two largest barriers to eating healthier.</p>
             <p>To test that hypothesis, I sent a survey to members of the Healthy Food FaceBook group, a group promoting healthy eating worldwide.  I received 22 responses and followed up with 6 respondents to conduct user interviews.</p>
             <img src="/content/radiance/survey-results.png" alt="Survey results of significant barriers to healthy eating">
@@ -60,80 +58,78 @@
         <section id="low-fidelity">
             <h2>Wireframes and prototypes</h2>
             <p>Time to start building.  I decided to start with the mobile app first, since most of the users I interviewed preferred a tool on their phone to a desktop website.  I had three main goals when designing the main user flow:</p>
-            <ol class="flex-container-x" role="list">
+            <ol role="list">
                 <li>
-                    <p class="counter">1.</p>
+                    <p class="counter">1</p>
                     <p>Increase convinience wherever possible</p>
             </li>
                 <li>
-                    <p class="counter">2.</p>
+                    <p class="counter">2</p>
                     <p>Be budget-friendly and transparent about cost</p>
                 </li>
                 <li>                    
-                    <p class="counter">3.</p>
+                    <p class="counter">3</p>
                     <p>Keep the recipes fun, straightforward, and delicious</p>
                 </li>
             </ol>
-            <div class="flex-container-x flex-space-between">
-                <img src="/content/radiance/wireframe-bundle.jpg" alt="digital wireframe">
-                <img src="/content/radiance/wireframe-plan.jpg" alt="digital wireframe">
+            <div class="grid-auto-column lo-fi-wireframes">
+                <img src="/content/radiance/wireframe-bundle.png" alt="digital wireframe">
+                <img src="/content/radiance/wireframe-plan.png" alt="digital wireframe">
             </div>
         </section>
         <section id="usability-study">
             <h2>Testing the design</h2>
-            <p>I conducted a usability study with 5 users (2 users representing the Ginny persona, and 3 representing the Carl persona) to test if they were able to complete the workflow to create a meal plan in the app and gather feedback on how effective the app is at making eating healthy easier.</p>
-            <div>
+            <p>I conducted a usability study with 5 users (2 users representing the Ginny persona, and 3 representing the Carl persona) to test if they were able to complete the workflow to create a meal plan in the app, and to gather their feedback.</p>
+            <div class="study-parameters">
                 <h3>Study parameters</h3>
-                <ul>
+                <ul role="list">
                     <li>
-                        <p>Study Type</p>
+                        <p class="text-bold">Study Type</p>
                         <p>Moderated Usability Study</p>
                     </li>
                     <li>
-                        <p>Location</p>
+                        <p class="text-bold">Location</p>
                         <p>United States, remote</p>
                     </li>
                     <li>
-                        <p>Participants</p>
+                        <p class="text-bold">Participants</p>
                         <p>5 Participants</p>
                     </li>
                     <li>
-                        <p>Length</p>
+                        <p class="text-bold">Length</p>
                         <p>15 - 20 minutes</p>
                     </li>
                 </ul>
             </div>
             <img src="/content/radiance/affinity-diagram.jpg" alt="Usability study notes">
-            <div>
+            <div class="insights">
                 <h3>Insights</h3>
-                <ul>
-                    <li>Users were unsure how much their meal plan would cost</li>
-                    <li>Users couldn't easily find recipes that fit their dietary restrictions</li>
+                <ul role="list">
+                    <li><p>Users were unsure how much their meal plan would cost</p></li>
+                    <li><p>Users couldn't easily find recipes that fit their dietary restrictions</p></li>
                 </ul>
             </div>
         </section>
         <section id="high-fidelity">
             <h2>Refining the design</h2>
-            <div>
-                <h3>Users were unsure how much their meal plan would cost</h3>
-                <p>My initial iteration of the Plan Preview page did not meet the goal to make the app budget-friendly and transparent about cost.  I addressed this by adding the price of each ingredient at each store alongside its availability.
+            <div class="change">
+                <p>The first iteration of the Plan Preview page did not meet the goal to make the app budget-friendly and transparent about cost.  I addressed this by adding the price of each ingredient at each store alongside its availability.
                 </p>
                 <img src="/content/radiance/plan-preview-before.jpg" alt="Screenshot of the Plan Preview screen before changes" class="before">
+                
                 <img src="/content/radiance/plan-preview-after.jpg" alt="Screenshot of the Plan Preview screen after changes" class="after">
             </div>
-            <div>
-                <h3>Users couldn't easily find recipes that fit their dietary restrictions</h3>
+            <div class="change">
                 <p>To make it easier for users with dietary restrictions to find recipes that fit their needs, I added labels to the recipe cards to more clearly call out when a recipe fits dietary restrictions.
                 </p>
                 <img src="/content/radiance/recipes-before.jpg" alt="Screenshot of the recipe cards before changes" class="before">
                 <img src="/content/radiance/recipes-after.jpg" alt="Screenshot of the recipe cards after changes" class="after">
             </div>
             <div>
-                <h3>Check out the high fidelity prototype!</h3>
-                <!-- <div style="left: 0; width: 100%; height: 667px; position: relative;"><iframe src="https://www.sketch.com/embed/s/10bd134e-960f-4eb5-aa87-ee3fdf929ba6/a/wLvEknq/play" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div> -->
+                <a href="https://www.sketch.com/embed/s/10bd134e-960f-4eb5-aa87-ee3fdf929ba6/a/wLvEknq/play" target="_blank" class="btn btn-primary btn-large">Check out the finished prototype!</a>
             </div>
         </section>
-        <section>
+        <section id="responsive-website">
             <h2>Moving this party to the web</h2>
             <p>My goal for Radiance’s responsive website was to maintain consistency with the look and feel of the mobile app, while making adjustments to take advantage of more screen real estate for tablet and desktop layouts.</p>
             <p>On mobile, the layout for the most part is the same, but the navigation bar across the bottom on the mobile app has been replaced by a traditional hamburger menu.</p>
@@ -141,27 +137,43 @@
         </section>
         <section id="conclusion">
             <h2>Takeaways</h2>
-            <div>
-                <h3>Impact</h3>
-                <p>Overall, users I tested with said they liked many of the app’s features and felt like it would be a useful tool to help them eat healthier.</p>
-            </div>
-            <div>
-                <h3>What I learned</h3>
-                <ul>
-                    <li>This was my first project using Sketch, and I learned a lot about how it works and how it differs from the other tools we’ve used in this course</li>
-                    <li>This project taught me a lot about the value of good background and user research.  Eating healthy is an issue with complicated socioeconomic challenges, so I had to put a lot of research and thought into what pain points could be helped with an app, and how to design it in such a way as to be inclusive and effective.</li>
-                </ul>
+            <div class="takeaways">
+                <div class="impact">
+                    <h3>Impact</h3>
+                    <p>Overall, users I tested with said they liked many of the app’s features and felt like it would be a useful tool to help them eat healthier, albeit not a silver bullet.</p>
+                    <p>From a business perspective, additional touchpoints on the user journey aside from an app would help this become a successful service.</p>
+                </div>
+                <div class="learnings">
+                    <h3>What I learned</h3>
+                    <ul role="list">
+                        <li>This was my first project using Sketch, and I learned a lot about how it works and how it differs from the other tools we’ve used in this course</li>
+                        <li>The value of good background and user research.  Eating healthy is an issue with complicated socioeconomic challenges.  I had to put a lot of research and thought into what I could do with an app, and how to integrate it natuarally into user's lives.</li>
+                    </ul>
+                </div>
             </div>
             <h2>What's next?</h2>
-            <ol>
-                <li>A requirement for this project was to make an app and responsive website, but I’d like to research if other products or services would better help make healthy eating easier.</li>
-                <li>Conduct another usability study to validate if the changes made after the first study met users needs, and gather feedback on the look and feel of the high fidelity designs.</li>
-                <li>Put on my web developer hat and bring these designs to life :)</li>
-            </ol>
+            <div class="next-steps">
+                <ol role="list">
+                    <li>
+                        <p class="counter">1</p>
+                        <p>A requirement for this project was to make an app and responsive website, but I’d like to research if other products or services would better help make healthy eating easier.</p>
+                </li>
+                    <li>
+                        <p class="counter">2</p>
+                        <p>Conduct another usability study to validate if the changes made after the first study met users needs, and gather feedback on the look and feel of the high fidelity designs.</p>
+                    </li>
+                    <li>                    
+                        <p class="counter">3</p>
+                        <p>Put on my web developer hat and bring these designs to life :)</p>
+                    </li>
+                </ol>
+            </div>
         </section>
-        <section>
-            <p>Thanks for taking the time to look at my work on Radiance!</p>
-            <a href="mailto:jparrish331@gmail.com" class="btn btn-primary btn-large">Get in touch</a>
+        <section id="project-contact">
+            <div class="flex-container-y">
+                <p>Thanks for taking the time to look at my work on Radiance!</p>
+                <a href="mailto:jparrish331@gmail.com" class="btn btn-large">Get in touch</a>
+            </div>
         </section>
     </main>
 </body>

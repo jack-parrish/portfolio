@@ -26,7 +26,7 @@ $grey-1: #102A43;
 *::after {
   box-sizing: border-box;
 }
-
+ 
 /* Remove default margin */
 body,
 h1,
@@ -628,10 +628,20 @@ section[id] {
 .flex-space-between {
   justify-content: space-between;
 }
+.grid-auto-column {
+  display: grid;
+  grid-auto-flow: column;
+  justify-items: center;
+}
 
 
 //Case Study Page Styling
 main.case-study {
+
+  section:last-child {
+    margin-bottom: 0;
+  }
+
   section.case-study {
     display: flex;
     justify-content: space-between;
@@ -687,6 +697,7 @@ main.case-study {
     h2 {
       font-size: 5rem;
       font-weight: normal;
+      border-bottom: solid 2px $primary-color;
     }
     p {
       color: $grey-1;
@@ -696,6 +707,7 @@ main.case-study {
 
   #background {
     text-align: center;
+    align-items: center;
     max-width: 90rem;
   }
 
@@ -733,13 +745,22 @@ main.case-study {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    text-align: left;
+
+    h2 {
+      align-self: flex-start;
+    }
 
     p {
+      max-width: 75%;
       margin-bottom: 5rem;
+      align-self: flex-start;
     }
 
     img {
-      max-width: 90rem;
+      max-width: 75%;
+      border-radius: 2rem;
+      box-shadow: .1rem .4rem .4rem $grey-1;
     }
   }
 
@@ -748,33 +769,255 @@ main.case-study {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    counter-reset: lo-fi-goal;
     
+    h2 {
+      align-self: flex-start;
+    }
+
     p {
       max-width: 90rem;
     }
 
     ol {
+      align-self: center;
       padding: 0;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      justify-items: center;
+      margin-bottom: 5rem;
 
       li {
-        counter-increment: lo-fi-goal;
-        max-width: 33%;
+        padding: 0 2rem;
         text-align: center;
-        padding: 2rem;
         font-size: 2.8rem;
         color: $grey-1;
 
         .counter {
           display: inline-block;
-          padding: 4rem 6rem;
-          background-color: $background-color;
-          color: $primary-color;
+          padding: 1.5rem 4rem 1.5rem 4rem;
           border-radius: 50%;
-          font-size: 5rem
+          font-size: 5rem;
+        }
+        
+        &:first-child .counter {
+          background-color: #1992d4;
+          color: #e3f8ff;
+        }
+        &:nth-child(2) .counter {
+
+          background-color: #f35627;
+          color: #ffe8d9;
+        }
+        &:last-child .counter {
+          background-color: #048271;
+          color: #f0fcf9;
         }
       }
+    }
+
+    .lo-fi-wireframes {
+      img {
+        border: 2px solid $grey-1;
+        max-width: 75%;
+        box-shadow: .1rem .4rem .4rem $grey-4;
+      }
+    }
+  }
+
+  #usability-study {
+    max-width: 110rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    h2 {
+      align-self: flex-start;
+    }
+
+    h3 {
+      font-size: 4rem;
+      text-align: center;
+    }
+
+    >p {
+      max-width: 75%;
+      align-self: flex-start;
+      margin-bottom: 5rem;
+    }
+
+    .study-parameters {
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      ul {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0,1fr));
+        justify-items: center;
+        justify-content: space-between;
+        text-align: center;
+        margin-bottom: 5rem;
+
+        li {
+          padding: 0 2rem;
+
+          p:last-child {
+            font-size: 2.2rem;
+          }
+        }
+      }
+    }
+
+    img {
+      max-width: 90%;
+      margin-bottom: 5rem;
+    }
+    .insights {
+      ul {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0,1fr));
+        text-align: center;
+        justify-items: center;
+  
+        li {
+          padding: 0 2rem;
+
+          p {
+            max-width: 90%;
+          }
+        }
+      }
+    }
+  }
+
+  #high-fidelity {
+    max-width: 140rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      margin-bottom: 3rem;
+    }
+
+    .change {
+      display: grid;
+      grid-template-columns: 2fr 3fr 3fr 2fr;
+      grid-template-rows: repeat(2, auto);
+      justify-items: center;
+      column-gap: 2rem;
+      row-gap: 3rem;
+      margin-bottom: 5rem;
+
+      p {
+        grid-column: 2/4;
+        grid-row: 1;
+        text-align: center;
+      }
+
+      img {
+        max-width: 75%;
+      }
+
+      .before {
+        grid-column: 1/3;
+        grid-row: 2;
+      }
+      .after {
+        grid-column: 3/5;
+        grid-row: 2;
+      }
+    }
+  }
+
+  #responsive-website {
+    max-width: 140rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    text-align: center;
+
+    p {
+      padding: 0 15rem;
+      margin: 0;
+    }
+  }
+
+  #conclusion {
+    max-width: 110rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+
+    h3 {
+      font-size: 4rem;
+    }
+
+    .takeaways {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      column-gap: 5rem;
+
+      .learnings {
+        ul {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+          gap: 2rem;
+          padding: 0;
+          font-size: 2.8rem;
+        }
+      }
+    }
+
+    .next-steps {
+      ol {
+        align-self: center;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0,1fr));
+        column-gap: 5rem;
+        justify-items: center;
+  
+        li {
+          text-align: center;
+          font-size: 2.8rem;
+          color: $grey-1;
+  
+          .counter {
+            display: inline-block;
+            padding: 1rem 3rem 1rem 3rem;
+            border-radius: 50%;
+            font-size: 4rem;
+            background-color: $background-color;
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+
+  #project-contact {
+    width: 100vw;
+    height: 50vh;
+    background-color: $background-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      color: $grey-9;
+    }
+
+    div {
+      max-width: 90rem;
+      align-items: center;
+      gap: 5rem;
     }
   }
 }
