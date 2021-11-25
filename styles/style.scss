@@ -691,6 +691,21 @@ main.case-study {
       align-self: center;
       max-height: 80vh;
     }
+
+    &.alt-layout {
+      flex-flow: column-reverse;
+      gap: 2rem;
+
+      img {
+        max-width: 90%;
+      }
+
+      .project-info-container {
+        .btn {
+          display: none;
+        }
+      }
+    }
   }
   
   section {
@@ -737,6 +752,16 @@ main.case-study {
       align-self: flex-end;
       margin: 0;
     }
+
+    &.alt-layout {
+      img {
+        max-width: 66%;
+      }
+      .persona {
+        align-self: center;
+        max-width: 90%;
+      }
+    }
   }
 
   #ideation {
@@ -769,6 +794,7 @@ main.case-study {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    gap: 2.5rem;
     
     h2 {
       align-self: flex-start;
@@ -818,8 +844,8 @@ main.case-study {
     .lo-fi-wireframes {
       img {
         border: 2px solid $grey-1;
-        max-width: 75%;
         box-shadow: .1rem .4rem .4rem $grey-4;
+        max-width: 75%;
       }
     }
   }
@@ -830,6 +856,7 @@ main.case-study {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    gap: 2.5rem;
 
     h2 {
       align-self: flex-start;
@@ -858,6 +885,7 @@ main.case-study {
         justify-items: center;
         justify-content: space-between;
         text-align: center;
+        padding: 0;
         margin-bottom: 5rem;
 
         li {
@@ -880,6 +908,7 @@ main.case-study {
         grid-template-columns: repeat(2, minmax(0,1fr));
         text-align: center;
         justify-items: center;
+        padding: 0;
   
         li {
           padding: 0 2rem;
@@ -899,7 +928,14 @@ main.case-study {
     align-items: center;
 
     h2 {
-      margin-bottom: 3rem;
+      margin-bottom: 5rem;
+    }
+
+    .changes {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 7.5rem;
     }
 
     .change {
@@ -909,9 +945,8 @@ main.case-study {
       justify-items: center;
       column-gap: 2rem;
       row-gap: 3rem;
-      margin-bottom: 5rem;
 
-      p {
+      .change-description {
         grid-column: 2/4;
         grid-row: 1;
         text-align: center;
@@ -919,6 +954,8 @@ main.case-study {
 
       img {
         max-width: 75%;
+        border: 2px solid $grey-1;
+        box-shadow: .1rem .4rem .4rem $grey-4;
       }
 
       .before {
@@ -928,6 +965,20 @@ main.case-study {
       .after {
         grid-column: 3/5;
         grid-row: 2;
+      }
+
+      &.alt-layout {
+        grid-template-columns: repeat(8, minmax(0,1fr));
+
+        .change-description {
+          grid-column: 1/4;
+          grid-row: 1/3;
+        }
+        img {
+          grid-column: 4/9;
+          grid-row: 1/3;
+          justify-self: end;
+        }
       }
     }
   }

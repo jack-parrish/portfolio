@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Jack Parrish - Minigame Madness Case Study</title>
+    <script src="https://kit.fontawesome.com/c79da5306f.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="background-light">
     <header>
         <nav>
             <a class="logo" href="/" aria-label="home">&lt;JP&gt;</a>
@@ -19,134 +21,166 @@
             <button class="btn"><i class="fas fa-file-download"></i><span>Resume</span></button>
         </nav>
     </header>
-    <main>
-        <section class="hero case-study">
-            <h1 class="large-heading">Minigame Madness</h1>
-            <p class="subtitle">Quick, casual minigames perfect for meeting icebreakers or friendly team competition</p>
-            <ul>
-                <li>When I worked on this: <span class="text-bold">August 2021 - September 2021</span></li>
-                <li>My role: <span class="text-bold">Product Design, UX Research</span></li>
-                <li>My tools: <span class="text-bold">Adobe XD</span></li>
-                <li><span class="text-bold">Conceptual case study for Google's UX Design Professional Certificate</span></li>
-            </ul>
-            <a href="#" class="btn btn-large btn-primary">Check it out!</a>
-            <img src="/content/radiance/radiance-thumbnail.png" alt="Radiance screen mockups">
+    <main class="case-study">
+        <section class="hero case-study alt-layout">
+            <div class="project-info-container">
+                <h1 class="large-heading">Minigame Madness</h1>
+                <p class="subtitle">Quick, casual minigames perfect for meeting icebreakers or friendly team competition.</p>
+                <ul class="project-metadata" role="list">
+                    <li>When I worked on this: <p class="text-bold">August 2021 - September 2021</p></li>
+                    <li>My role: <p class="text-bold">Product Design, UX Research</p></li>
+                    <li>Requirements: <p class="text-bold">Design a responsive website</p></li>
+                </ul>
+                <a href="#background" class="btn btn-large btn-primary">Check it out!</a>
+            </div>
+            <img src="/content/minigamemadness/minigames-thumbnail.png" alt="Minigame Madness screen mockups">
         </section>
-        <section id="background">
+        <section id="background" class="flex-container-y">
             <h2>What's the business need?</h2>
-            <p>According to the CDC, fewer than 1 in 7 eat enough fruit and an even smaller proportion eat enough vegetables.</p>
-            <p>At the same time, there is data to suggest that adults do want to eat healthier.  The nutrition industry is growing at a 6.6% clip per year and is projected to reach $465.4 billion by 2025.</p>
-            <p>Something that helps alleviate the struggles with eating healthy has ample room to be successful.</p>
+            <p>Unengaging meeting drain employees off their energy, brainpower, and stamina, costing billions across the US economy each year.</p>
+            <p>Meanwhile, since the pandemic started, the number of meetings at work has jumped 10%, or about 3 extra meetings per week, per employee.</p>
+            <p><strong>If meetings are here to stay, there is a need to help keep everyone engaged and productive during them.</strong></p>
         </section>
-        <section id="research">
-            <h2>So why do many adults struggle to eat healthy, and how might we help make it easier?</h2>
-            <p>My initial hypothesis based on existing studies and research I found was that cost and perceived taste were the two largest barriers to eating healthier.</p>
-            <p>To test that hypothesis, I sent a survey to members of the Healthy Food FaceBook group, a group promoting healthy eating worldwide.  I received 22 responses and followed up with 6 respondents to conduct user interviews.</p>
-            <img src="/content/radiance/survey-results.png" alt="Survey results of significant barriers to healthy eating">
-            <p>I synthesized common trends I heard from survey respondents and interviewees into two personas.  These personas are users who would be likely use an app to accomplish their nutrition goals, because designing a mobile app was one of the constraints for this project.</p>
-            <img src="/content/radiance/persona-carl.jpg" alt="Carl Perry: a stay-at-home dad who needs to find easy, affordable, and nutritious meals so his family can eat healthier.">
-            <img src="/content/radiance/persona-ginny.jpg" alt="Ginny McNab: a young professional who needs a way to cook nutritious meals faster because she doesn’t want to spend all her time after work cooking.">
+        <section id="research" class="alt-layout">
+            <h2>What makes a meeting effective?</h2>
+            <p>I asked 4 of my coworkers at Epic, who collectively schedule and attend dozens of meetings every week, about their experience leading and participating in meetings.  I was interested in hearing what they thought worked, what their favorite meetings are, and why.</p>
+            <img src="/content/minigamemadness/word-cloud.png" alt="Most used words to describe effective meetings.">
+            <p>Overall, the users I talked to found that meetings that are engaging and help build stronger relationships among the team are the most successful, and that having a bit of fun is the best way to do that.  That feedback became the basis for a persona, which I’d use throughout the design process.</p>
+            <img src="/content/minigamemadness/persona.jpg" alt="Ashley: a project manager who needs a way to keep her team members engaged during meetings." class="persona">
         </section>
         <section id="ideation">
-            <h2>Starting the design</h2>
-            <p>Since one of the project requirements was to design a mobile app and responsive website, most of my ideation was focused on what features could be built into those.</p>
-            <p>I did the crazy eights exercise to brainstorm ideas for how to address my personas’ pain points within an app or website.</p>
-            <img src="/content/radiance/crazy-eights.jpg" alt="Crazy Eights exercise">
+            <h2>All fun and games: starting the design</h2>
+            <p>One of the project requirements was to design a responsive website, which helped narrow the scope of what I was brainstorming.</p>
+            <p>I landed on the idea to make a collection of short, team-focused, minigames that could be played online.  This would hit on my goals to get everyone participating, bring people closer together, and have some fun.</p>
+            <p>Below is some of the ideas I had for how to find games to play on the site:</p>
+            <img src="/content/minigamemadness/crazy-eights.jpg" alt="Crazy Eights exercise">
         </section>
         <section id="low-fidelity">
-            <h2>Wireframes and prototype</h2>
-            <p>Based on my findings during user research, I had three main goals when designing the main user flow:</p>
-            <ol>
-                <li>Help make the process of finding, shopping for, and cooking nutritious recipes as convenient as possible</li>
-                <li>Be budget-friendly and transparent about cost</li>
-                <li>Keep the recipes fun, straightforward, and delicious</li>
+            <h2>Sitemap & low-fi designs</h2>
+            <p>Now that I had an idea of what I wanted my website to be, it was time to start planning the information architecture of the site and building the screens.  Looking at my persona’s goals and behaviors, I had a couple things to keep in mind when designing the IA and wireframes for the site:</p>
+            <ol role="list">
+                <li>
+                    <p class="counter">1</p>
+                    <p>Site should be quick and easy to navigate.  Icebreakers often only take up a few minutes.</p>
+            </li>
+                <li>
+                    <p class="counter">2</p>
+                    <p>Users should spend the majority of time on the site playing, not picking games</p>
+                </li>
+                <li>                    
+                    <p class="counter">3</p>
+                    <p>Avoid unnecessary barriers to playing with who you want</p>
+                </li>
             </ol>
-            <img src="/content/radiance/wireframe-bundle.jpg" alt="digital wireframe">
-            <img src="/content/radiance/wireframe-plan.jpg" alt="digital wireframe">
+            <div class="grid-auto-column">
+                <img src="/content/minigamemadness/site-map.png" alt="Site map">
+            </div>
+            <div class="grid-auto-column lo-fi-wireframes">
+                <img src="/content/minigamemadness/desktop-home-wireframe.png" alt="home page wireframe">
+                <img src="/content/minigamemadness/tablet-search-wireframe.png" alt="search page wireframe">
+            </div>
         </section>
         <section id="usability-study">
-            <h2>Testing the design</h2>
-            <p>I conducted a usability study with 5 users (2 users representing the Ginny persona, and 3 representing the Carl persona) to test if they were able to complete the workflow to create a meal plan in the app and gather feedback on how effective the app is at making eating healthy easier.</p>
-            <div>
+            <h2>Putting it to the test</h2>
+            <p>I conducted a usability study with some more of my coworkers at Epic, who represent my persona, to test the usability of the site and get feedback on the layout and structure of the site so far.</p>
+            <div class="study-parameters">
                 <h3>Study parameters</h3>
-                <ul>
+                <ul role="list">
                     <li>
-                        <p>Study Type</p>
+                        <p class="text-bold">Study Type</p>
                         <p>Moderated Usability Study</p>
                     </li>
                     <li>
-                        <p>Location</p>
-                        <p>United States, remote</p>
+                        <p class="text-bold">Location</p>
+                        <p>Madison, WI, USA</p>
                     </li>
                     <li>
-                        <p>Participants</p>
-                        <p>5 Participants</p>
+                        <p class="text-bold">Participants</p>
+                        <p>4 Participants</p>
                     </li>
                     <li>
-                        <p>Length</p>
-                        <p>15 - 20 minutes</p>
+                        <p class="text-bold">Length</p>
+                        <p>10 minutes</p>
                     </li>
                 </ul>
             </div>
-            <img src="/content/radiance/affinity-diagram.jpg" alt="Usability study notes">
-            <div>
+            <div class="insights">
                 <h3>Insights</h3>
-                <ul>
-                    <li>Users were unsure how much their meal plan would cost</li>
-                    <li>Users couldn't easily find recipes that fit their dietary restrictions</li>
+                <ul role="list">
+                    <li>
+                        <p class="text-bold">Going from browsing games to creating a match and playing those games is awkward</p>
+                    </li>
+                    <li>
+                        <p class="text-bold">Users weren’t sure if they would use the site without seeing more details about the minigames</p>
+                    </li>
                 </ul>
             </div>
         </section>
         <section id="high-fidelity">
             <h2>Refining the design</h2>
-            <div>
-                <h3>Users were unsure how much their meal plan would cost</h3>
-                <p>My initial iteration of the Plan Preview page did not meet the goal to make the app budget-friendly and transparent about cost.  I addressed this by adding the price of each ingredient at each store alongside its availability.
-                </p>
-                <img src="/content/radiance/plan-preview-before.jpg" alt="Screenshot of the Plan Preview screen before changes" class="before">
-                <img src="/content/radiance/plan-preview-after.jpg" alt="Screenshot of the Plan Preview screen after changes" class="after">
+            <div class="changes">
+                <div class="change alt-layout">
+                    <div class="change-description">
+                        <p>Users were getting stuck when trying to go from looking at the minigames to playing them.</p>
+                        <p>To make this more intuitive, I added a way to set up a game queue and quickly create a match from the queue</p>
+                    </div>
+                    <img src="/content/minigamemadness/desktop-queue.jpg" alt="Screenshot of the home screen with an added queue section.">
+                </div>
+                <div class="change">
+                    <div class="change-description">
+                        <p>Most users couldn’t say that they’d use the site themselves without seeing the minigames on the site.</p>
+                        <p>Addressing this feedback was the most fun part of the project.  I got to think of fun minigames to add to the site and how they should be played.</p>
+                    </div>
+                    <img src="/content/minigamemadness/game-info-before.png" alt="Screenshot of the game card before changes" class="before">
+                    <img src="/content/minigamemadness/game-info-after-1.jpg" alt="Screenshot of a game card after changes" class="after">
+                    <!-- <img src="/content/minigamemadness/game-info-after-2.jpg" alt="Screenshot of a game card after changes" class="after">
+                    <img src="/content/minigamemadness/game-info-after-3.jpg" alt="Screenshot of a game card after changes" class="after"> -->
+                </div>
+                <div>
+                    <a href="https://xd.adobe.com/view/3be58f83-3c94-4c50-99a4-5a870a8236cf-6eb6/?fullscreen" class="btn btn-primary btn-large">Check out the finished prototype!</a>
+                </div>
             </div>
-            <div>
-                <h3>Users couldn't easily find recipes that fit their dietary restrictions</h3>
-                <p>To make it easier for users with dietary restrictions to find recipes that fit their needs, I added labels to the recipe cards to more clearly call out when a recipe fits dietary restrictions.
-                </p>
-                <img src="/content/radiance/recipes-before.jpg" alt="Screenshot of the recipe cards before changes" class="before">
-                <img src="/content/radiance/recipes-after.jpg" alt="Screenshot of the recipe cards after changes" class="after">
-            </div>
-            <div>
-                <h3>Check out the high fidelity prototype!</h3>
-                <div style="left: 0; width: 100%; height: 667px; position: relative;"><iframe src="https://www.sketch.com/embed/s/10bd134e-960f-4eb5-aa87-ee3fdf929ba6/a/wLvEknq/play" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div>
-            </div>
-        </section>
-        <section>
-            <h2>Moving this party to the web</h2>
-            <p>My goal for Radiance’s responsive website was to maintain consistency with the look and feel of the mobile app, while making adjustments to take advantage of more screen real estate for tablet and desktop layouts.</p>
-            <p>On mobile, the layout for the most part is the same, but the navigation bar across the bottom on the mobile app has been replaced by a traditional hamburger menu.</p>
-            <img src="/content/radiance/responsive-website.jpg" alt="responsive website home screen mockups">
+            
         </section>
         <section id="conclusion">
             <h2>Takeaways</h2>
-            <div>
-                <h3>Impact</h3>
-                <p>Overall, users I tested with said they liked many of the app’s features and felt like it would be a useful tool to help them eat healthier.</p>
-            </div>
-            <div>
-                <h3>What I learned</h3>
-                <ul>
-                    <li>This was my first project using Sketch, and I learned a lot about how it works and how it differs from the other tools we’ve used in this course</li>
-                    <li>This project taught me a lot about the value of good background and user research.  Eating healthy is an issue with complicated socioeconomic challenges, so I had to put a lot of research and thought into what pain points could be helped with an app, and how to design it in such a way as to be inclusive and effective.</li>
-                </ul>
+            <div class="takeaways">
+                <div class="impact">
+                    <h3>Impact</h3>
+                    <p>Most of the users I spoke to loved the idea, although some users raised concerns that it may be too distracting for certain meetings.</p>
+                    <p>Some additional research should be done to investigate ways to maintain the spirit of the site while appealing to more professional settings.</p>
+                </div>
+                <div class="learnings">
+                    <h3>What I learned</h3>
+                    <ul role="list">
+                        <li>Carefully planning the information architecture of the site helped me keep the layout organized and easy to navigate.</li>
+                        <li>I put a lot of effort towards the visual design of the site in this project.  I learned about the ins and outs of Adobe XD, as well as how to apply gestalt principles in my page layouts.</li>
+                    </ul>
+                </div>
             </div>
             <h2>What's next?</h2>
-            <ol>
-                <li>A requirement for this project was to make an app and responsive website, but I’d like to research if other products or services would better help make healthy eating easier.</li>
-                <li>Conduct another usability study to validate if the changes made after the first study met users needs, and gather feedback on the look and feel of the high fidelity designs.</li>
-                <li>Put on my web developer hat and bring these designs to life :)</li>
-            </ol>
+            <div class="next-steps">
+                <ol role="list">
+                    <li>
+                        <p class="counter">1</p>
+                        <p>Conduct another usability study to assess the effectiveness of the high fidelity designs.</p>
+                </li>
+                    <li>
+                        <p class="counter">2</p>
+                        <p>Research how to make the website more usable for professional settings.</p>
+                    </li>
+                    <li>                    
+                        <p class="counter">3</p>
+                        <p>Put on my web developer hat and bring these designs to life :)</p>
+                    </li>
+                </ol>
+            </div>
         </section>
-        <section>
-            <p>Thanks for taking the time to look at my work on Radiance!</p>
-            <a href="mailto:jparrish331@gmail.com" class="btn btn-primary btn-large">Get in touch</a>
+        <section id="project-contact">
+            <div class="flex-container-y">
+                <p>Thanks for taking the time to look at my work on Minigame Madness!</p>
+                <a href="mailto:jparrish331@gmail.com" class="btn btn-large">Get in touch</a>
+            </div>
         </section>
     </main>
 </body>
