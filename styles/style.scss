@@ -180,7 +180,7 @@ nav {
           transition: transform .3s;
         }
 
-        &:hover,&:focus {
+        &:hover,&:focus-visible {
           color: $primary-color;
 
           &::after {
@@ -216,7 +216,7 @@ button {
   transition-duration: .25s;
   transition-timing-function: ease-in-out;
 
-  &:hover,&:focus {
+  &:hover,&:focus-visible {
     background-color: rgba(79, 201, 85, .15); 
   }
 }
@@ -236,7 +236,7 @@ button {
   box-shadow: .1rem .2rem .2rem $grey-3;
   
 
-  &:hover {
+  &:hover,&:focus-visible {
     background-color:$background-color;
     color: $grey-9;
   }

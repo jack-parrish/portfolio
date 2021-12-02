@@ -4,9 +4,210 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Jack Parrish - PathWayfinders Case Study</title>
+    <script src="https://kit.fontawesome.com/c79da5306f.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    
+<body class="background-light">
+    <header>
+        <nav>
+            <a class="logo" href="/" aria-label="home">&lt;JP&gt;</a>
+            <ol role="list">
+                <li class="nav-list-item"><a href="/#about">About</a></li>
+                <li class="nav-list-item"><a href="/#projects">Projects</a></li>
+                <li class="nav-list-item"><a href="/#experience">Experience</a></li>
+                <li class="nav-list-item"><a href="/#contact">Contact</a></li>
+            </ol>
+            <button class="btn"><i class="fas fa-file-download"></i><span>Resume</span></button>
+        </nav>
+    </header>
+    <main class="case-study">
+        <section class="hero case-study">
+            <div class="project-info-container">
+                <h1 class="large-heading">PathWayfinders</h1>
+                <p class="subtitle">Guiding your way indoors and out.</p>
+                <ul class="project-metadata" role="list">
+                    <li>When I worked on this: <p class="text-bold">April 2021 - July 2021</p></li>
+                    <li>My role: <p class="text-bold">UX Research, Product Design</p></li>
+                    <li>Requirements: <p class="text-bold">Design a mobile app</p></li>
+                </ul>
+                <a href="#background" class="btn btn-large btn-primary">Check it out!</a>
+            </div>
+            <img src="/content/pathwayfinders/pathwayfinders-thumbnail.png" alt="PathWayfinders screen mockups">
+        </section>
+        <section id="background" class="flex-container-y">
+            <h2>Some context</h2>
+            <p>Spaces like college campuses and convention centers can often feel dauting or congested, with thousands of people navigating through them. These spaces have multiple buildings, floors, and indoor and outdoor components, not to mention a ton of different events happening all at once.  It's easy for someone new to feel intimidated or uncomfortable.</p>
+        </section>
+        <section id="research">
+            <h2>So what makes these spaces hard to feel comfortable in?</h2>
+            <p>To try to find an answer to this question, as well as understand the surrounding context in which users interact with these spaces, I conducted 6 user interviews.</p>
+            <p>I decided to focus on new college students and professional conference attendees, because both colleges and conferences are already tech-heavy events and these users would likely benefit the most from a mobile app.</p>
+            <h3>Pain Points</h3>
+            <ol role="list">
+                <li>
+                    <p class="counter">1</p>
+                    <p>Time</p>
+                    <p>Users have little time in their schedules to get from place to place.</p>
+            </li>
+                <li>
+                    <p class="counter">2</p>
+                    <p>Confidence</p>
+                    <p>Some users felt intimidated being in a new place away from people and places they know.</p>
+                </li>
+                <li>                    
+                    <p class="counter">3</p>
+                    <p>Accessibility</p>
+                    <p>Complex and crowded spaces are particularly difficult to navigate for users with mobility disabilities.</p>
+                </li>
+                <li>                    
+                    <p class="counter">4</p>
+                    <p>Lost Indoors</p>
+                    <p>Users generally felt the most anxious or uncomfortable indoors, where their phone's GPS isn't as helpful.</p>
+                </li>
+            </ol>
+            <p>I used what I learned in my interviews to map the "as is" user journey and create two personas.</p>
+            <img src="/content/pathwayfinders/persona-frank.png" alt="Frank Malone: a manager visiting a professional conference who needs to navigate from event to event quickly." class="persona-left">
+            <img src="/content/pathwayfinders/persona-elaine.png" alt="Elaine Dawson: a first-year college student unfamiliar with her college campus who needs a way to get directions to her classes so she won't be late." class="persona-right">
+            <img src="/content/pathwayfinders/user-journey.png" alt="Elaine Dawson's as-is user journey" class="user-journey">
+        </section>
+        <section id="ideation">
+            <h2>How might a new mobile app help?</h2>
+            <p>Based on my research, I knew my design solution needed to help save time, help build familiarity, and help people of all mobilities get where they need to go.  After some How Might We and Crazy Eights exercises, I decided to design a navigation app that could work both indoors and outdoors.</p>
+            <p>I conducted a competitive audit of other navigation apps to identify what works well, and where my app has a chance to stand out from the crowd:</p>
+            <img src="/content/pathwayfinders/competitive-audit.png" alt="Compeititive audit summary">
+        </section>
+        <section id="low-fidelity">
+            <h2>Wireframes and prototypes</h2>
+            <p>Time to start putting pen to paper.  I iterated on the high level layout of the app’s pages on paper before I took time towards digitizing them in Figma.  I had 3 main goals based on what I knew about my users</p>
+            <ol role="list">
+                <li>
+                    <p class="counter">1</p>
+                    <p>Keep the interaction as simple as possible</p>
+            </li>
+                <li>
+                    <p class="counter">2</p>
+                    <p>Boost convinience wherever possible</p>
+                </li>
+                <li>                    
+                    <p class="counter">3</p>
+                    <p>Be consious of people with disabilities</p>
+                </li>
+            </ol>
+            <div class="grid-auto-column lo-fi-wireframes">
+                <img src="/content/pathwayfinders/paper-wireframes.jpg" alt="paper wireframes">
+                <img src="/content/pathwayfinders/wireframe-route.png" alt="digital wireframe">
+            </div>
+        </section>
+        <section id="usability-study">
+            <h2>Testing the design</h2>
+            <p>I conducted two rounds of usability studies.  One with a low-fidelity prototype and another with a later, high-fidelity iteration.  Each usability study was with 4 users (2 users representing the Frank persona, and 2 representing the Elaine persona).</p>
+            <div class="study-parameters">
+                <h3>Study parameters</h3>
+                <ul role="list">
+                    <li>
+                        <p class="text-bold">Study Type</p>
+                        <p>Moderated Usability Study</p>
+                    </li>
+                    <li>
+                        <p class="text-bold">Location</p>
+                        <p>United States, remote</p>
+                    </li>
+                    <li>
+                        <p class="text-bold">Participants</p>
+                        <p>4 Participants</p>
+                    </li>
+                    <li>
+                        <p class="text-bold">Length</p>
+                        <p>15 - 20 minutes</p>
+                    </li>
+                </ul>
+            </div>
+            <img src="/content/pathwayfinders/affinity-diagram.jpg" alt="Usability study notes">
+            <div class="insights">
+                <h3>Insights</h3>
+                <ul role="list">
+                    <li><p>Users needed to see more information about a location</p></li>
+                    <li><p>The user flow took too many steps to complete</p></li>
+                    <li><p>Favoriting a location and getting to the Route Select screen were unintuitive</p></li>
+                </ul>
+            </div>
+        </section>
+        <section id="high-fidelity">
+            <h2>Refining the design</h2>
+            <div class="changes">
+                <div class="change">
+                    <div class="change-description">
+                        <p>Early designs didn’t have a screen for seeing information about a location, but based on feedback in the usability study, I added that screen to the user flow.</p>
+                    </div>
+                    <img src="/content/pathwayfinders/location-before.png" alt="Screenshot of the nonexistent Location screen before screen" class="before">
+                    
+                    <img src="/content/pathwayfinders/location-after.png" alt="Screenshot of the new Location screen after changes" class="after">
+                </div>
+                <div class="change">
+                    <div class="change-description">
+                        <p>The second usability study revealed problems with the ‘Search Results’ and ‘Route Selection’ parts of the user flow.  To address these, I made the following changes</p>
+                        <ul role="list">
+                            <li>Removed location ratings on the search results screen</li>
+                            <li>Added route ratings on the route selection screen</li>
+                            <li>Added a button to view routes to the search results screen</li>
+                        </ul>
+                    </div>
+                    <img src="/content/pathwayfinders/search-results-before.png" alt="Screenshot of the search results screen before changes" class="before">
+                    <img src="/content/pathwayfinders/route-select-before.png" alt="Screenshot of the route select screen before changes" class="before">
+                    <img src="/content/pathwayfinders/search-results-mockup.png" alt="Screenshot of the search results screen after changes" class="after">
+                    <img src="/content/pathwayfinders/route-select-mockup.png" alt="Screenshot of the route select screen after changes" class="after">
+                </div>
+                <div>
+                    <div class="mockups">
+                        <img src="/content/pathwayfinders/home-mockup.png" alt="mockup of the home screen">
+                        <img src="/content/pathwayfinders/searching-mockup.png" alt="mockup of the searching screen">
+                        <img src="/content/pathwayfinders/search-results-mockup.png" alt="mockup of the search results screen">
+                        <img src="/content/pathwayfinders/navigation-mockup.png" alt="mockup of the navigation screen">
+                        <img src="/content/pathwayfinders/destination-mockup.png" alt="mockup of the destination screen">
+                    </div>
+                    <a href="https://www.figma.com/proto/B9uSlySmEnjuPpv8W566tA/PathWayfinder-Wireframes?node-id=248%3A1325&scaling=scale-down&page-id=202%3A2&starting-point-node-id=248%3A1325" target="_blank" class="btn btn-primary btn-large">Check out the finished prototype!</a>
+                </div>
+            </div>
+        </section>
+        <section id="conclusion">
+            <h2>Takeaways</h2>
+            <div class="takeaways">
+                <div class="impact">
+                    <h3>Impact</h3>
+                    <p>Users I tested with said they would be confident using the app and that it would definitely help them feel more comfortable in a new place.</p>
+                </div>
+                <div class="learnings">
+                    <h3>What I learned</h3>
+                    <ul role="list">
+                        <li>This was my first project as a UX-er in training!  I learned so much about the user-centered design process, connecting with users, how to use digital tools like Figma, and much, much more.</li>
+                    </ul>
+                </div>
+            </div>
+            <h2>What's next?</h2>
+            <div class="next-steps">
+                <ol role="list">
+                    <li>
+                        <p class="counter">1</p>
+                        <p>A requirement for this project was to make a mobile app, but I’d like to research if other products or services would better help users.</p>
+                </li>
+                    <li>
+                        <p class="counter">2</p>
+                        <p>Conduct another usability study to validate if the pain points from the 2nd usability study remain and catch any new feedback users may have.</p>
+                    </li>
+                    <li>                    
+                        <p class="counter">3</p>
+                        <p>Research the technical requirements to make indoor navigation possible.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+        <section id="project-contact">
+            <div class="flex-container-y">
+                <p>Thanks for taking the time to look at my work on PathWayfinders!</p>
+                <a href="mailto:jparrish331@gmail.com" class="btn btn-large">Get in touch</a>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
