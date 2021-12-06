@@ -21,7 +21,7 @@
             <button class="btn"><i class="fas fa-file-download"></i><span>Resume</span></button>
         </nav>
     </header>
-    <main class="case-study">
+    <main class="case-study pathway">
         <section class="hero case-study">
             <div class="project-info-container">
                 <h1 class="large-heading">Pathway</h1>
@@ -31,7 +31,6 @@
                     <li>My role: <p class="text-bold">UX Research, Product Design</p></li>
                     <li>Requirements: <p class="text-bold">Design a mobile app</p></li>
                 </ul>
-                <a href="#background" class="btn btn-large btn-primary">Check it out!</a>
             </div>
             <img src="/content/pathway/pathway-thumbnail.png" alt="Pathway screen mockups">
         </section>
@@ -130,50 +129,50 @@
             <div class="insights">
                 <h3>Insights</h3>
                 <ul role="list">
-                    <li><p>Users needed to see more information about a location</p></li>
-                    <li><p>The user flow took too many steps to complete</p></li>
-                    <li><p>Favoriting a location and getting to the Route Select screen were unintuitive</p></li>
+                    <li class="col-span-2"><p class="text-bold">Users needed to see more information about a location</p></li>
+                    <li class="col-span-2"><p class="text-bold">The user flow took too many steps to complete</p></li>
+                    <li class="col-span-2"><p class="text-bold">Favoriting a location and getting to the Route Select screen were unintuitive</p></li>
                 </ul>
             </div>
         </section>
         <section id="high-fidelity">
             <h2>Refining the design</h2>
-            <div class="changes">
-                <div class="change">
+            <ol class="changes grid-auto-row">
+                <li class="change">
                     <div class="change-description">
                         <p>Early designs didn’t have a screen for seeing information about a location, but based on feedback in the usability study, I added that screen to the user flow.</p>
                     </div>
-                    <img src="/content/pathway/location-before.png" alt="Screenshot of the nonexistent Location screen before screen" class="before">
+                    <img src="/content/pathway/location-before.png" alt="Screenshot of the nonexistent Location screen before screen" class="before no-border img-tall">
                     
-                    <img src="/content/pathway/location-after.png" alt="Screenshot of the new Location screen after changes" class="after">
-                </div>
-                <div class="change">
+                    <img src="/content/pathway/location-after.png" alt="Screenshot of the new Location screen after changes" class="after no-border img-tall">
+                </li>
+                <li class="change four-cols">
                     <div class="change-description">
-                        <p>The second usability study revealed problems with the ‘Search Results’ and ‘Route Selection’ parts of the user flow.  To address these, I made the following changes</p>
-                        <ul role="list">
-                            <li>Removed location ratings on the search results screen</li>
-                            <li>Added route ratings on the route selection screen</li>
-                            <li>Added a button to view routes to the search results screen</li>
-                        </ul>
+                        <p>My second usability study revealed problems with the ‘Search Results’ and ‘Route Selection’ parts of the user flow.  To address these, I made the following changes:</p>
                     </div>
-                    <img src="/content/pathway/search-results-before.png" alt="Screenshot of the search results screen before changes" class="before">
-                    <img src="/content/pathway/route-select-before.png" alt="Screenshot of the route select screen before changes" class="before">
-                    <img src="/content/pathway/search-results-mockup.png" alt="Screenshot of the search results screen after changes" class="after">
-                    <img src="/content/pathway/route-select-mockup.png" alt="Screenshot of the route select screen after changes" class="after">
-                </div>
+                    <ul role="list" class="change-list">
+                        <li class="col-span-2"><p>Removed location ratings on the search results screen</p></li>
+                        <li class="col-span-2"><p>Added route ratings on the route selection screen</p></li>
+                        <li class="col-span-2"><p>Added a button to view routes to the search results screen</p></li>
+                    </ul>
+                    <img src="/content/pathway/search-results-before.png" alt="Screenshot of the search results screen before changes" class="before img-tall no-border">
+                    <img src="/content/pathway/route-select-before.png" alt="Screenshot of the route select screen before changes" class="before img-tall no-border">
+                    <img src="/content/pathway/search-results-mockup.png" alt="Screenshot of the search results screen after changes" class="after img-tall no-border">
+                    <img src="/content/pathway/route-select-mockup.png" alt="Screenshot of the route select screen after changes" class="after img-tall no-border">
+                </li>
                 <div>
-                    <div class="mockups">
+                    <!-- <div class="mockups">
                         <img src="/content/pathway/home-mockup.png" alt="mockup of the home screen">
                         <img src="/content/pathway/searching-mockup.png" alt="mockup of the searching screen">
                         <img src="/content/pathway/search-results-mockup.png" alt="mockup of the search results screen">
                         <img src="/content/pathway/navigation-mockup.png" alt="mockup of the navigation screen">
                         <img src="/content/pathway/destination-mockup.png" alt="mockup of the destination screen">
-                    </div>
+                    </div> -->
                     <a href="https://www.figma.com/proto/B9uSlySmEnjuPpv8W566tA/PathWayfinder-Wireframes?node-id=248%3A1325&scaling=scale-down&page-id=202%3A2&starting-point-node-id=248%3A1325" target="_blank" class="btn btn-primary btn-large">Check out the finished prototype!</a>
                 </div>
             </div>
         </section>
-        <section id="conclusion">
+        <section id="conclusion" class="grid-auto-row">
             <h2>Takeaways</h2>
             <div class="takeaways">
                 <div class="impact">
@@ -182,9 +181,7 @@
                 </div>
                 <div class="learnings">
                     <h3>What I learned</h3>
-                    <ul role="list">
-                        <li>This was my first project as a UX-er in training!  I learned so much about the user-centered design process, connecting with users, how to use digital tools like Figma, and much, much more.</li>
-                    </ul>
+                        <p>This was my first project as a UX-er in training!  I learned so much about the user-centered design process, connecting with users, how to use digital tools like Figma, and much, much more.</p>
                 </div>
             </div>
             <h2>What's next?</h2>

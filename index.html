@@ -12,13 +12,28 @@
     <header>
         <nav>
             <a class="logo" href="/" aria-label="home">&lt;JP&gt;</a>
-            <ol role="list">
+            <ol role="list" class="desktop-nav-links">
                 <li class="nav-list-item"><a href="/#about">About</a></li>
                 <li class="nav-list-item"><a href="/#projects">Projects</a></li>
                 <li class="nav-list-item"><a href="/#experience">Experience</a></li>
                 <li class="nav-list-item"><a href="/#contact">Contact</a></li>
             </ol>
-            <button class="btn"><i class="fas fa-file-download"></i><span>Resume</span></button>
+            <button class="btn desktop-nav-links"><i class="fas fa-file-download"></i><span>Resume</span></button>
+            <div class="mobile-nav-links">
+                <input type="checkbox" aria-label="Navbar toggle" id="nav-toggle" class="nav-toggle"></input>
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <span></span>
+                </label>
+                <aside class="nav-content">
+                    <ol role="list">
+                        <li class="nav-list-item"><a href="/#about">About</a></li>
+                        <li class="nav-list-item"><a href="/#projects">Projects</a></li>
+                        <li class="nav-list-item"><a href="/#experience">Experience</a></li>
+                        <li class="nav-list-item"><a href="/#contact">Contact</a></li>
+                    </ol>
+                    <button class="btn"><i class="fas fa-file-download"></i><span>Resume</span></button>
+                </aside>
+            </div>
         </nav>
     </header>
 
@@ -27,7 +42,8 @@
             <p class="intro">Hello, my name is</p>
             <h1 class="large-heading">Jack Parrish.</h1>
             <p class="subtitle">I solve problems by keeping the user at heart.</p>
-            <p>I'm a former engineer turned UX designer.  I'm passionate about improving the digital experience through accessible, user-centered designs, and I have the web development experience to know what's feasible in code and how to bring those designs to life.  I’m currently looking for new opportunities to solve challenging problems, expand my UX skillset, and collaborate as a part of a team.</p>
+            <p>I'm a former engineer turned UX designer.  I want to improve the digital experience through accessible, user-centered designs, and I have the web development experience to know what's feasible in code and how to bring those designs to life.</p>
+            <p>I’m currently looking for new opportunities to solve challenging problems, expand my UX skillset, and collaborate as a part of a team.</p>
             <a href="#about" class="btn btn-large">See why we'd work well together!</a>
         </section>
 
@@ -76,10 +92,10 @@
                             <li class="skill">Product Design</li>
                             <li class="skill">Sketch</li>
                         </ul>
-                        <a href="/case-studies/radiance.html" class="btn btn-primary">Learn more</a>
                         <a href="/case-studies/radiance.html" class="project-thumbnail">
                             <img src="./content/radiance/radiance-thumbnail.png" alt="Radiance screen mockups">
                         </a>
+                        <a href="/case-studies/radiance.html" class="btn btn-large btn-primary">Learn more</a>
                     </li>
                     <li class="project" id="minigame-madness">
                         <header>
@@ -92,12 +108,12 @@
                             <li class="skill">UX Research</li>
                             <li class="skill">Adobe XD</li>
                         </ul>
-                        <a href="/case-studies/minigamemadness.html" class="btn btn-primary">Learn more</a>
                         <a href="/case-studies/minigamemadness.html" class="project-thumbnail">
                             <img src="./content/minigamemadness/minigames-thumbnail.png" alt="Minigame Madness screen mockups">
                         </a>
+                        <a href="/case-studies/minigamemadness.html" class="btn btn-large btn-primary">Learn more</a>
                     </li>
-                    <li class="project" id="pathway">
+                    <li class="project" id="pathway-project">
                         <header>
                             <p class="project-type">UX Case Study</p>
                             <h3 class="project-title">Pathway: Guiding Your Way Indoors and Out</h3>
@@ -108,10 +124,10 @@
                             <li class="skill">Product Design</li>
                             <li class="skill">Figma</li>
                         </ul>
-                        <a href="/case-studies/pathway.html" class="btn btn-primary">Learn more</a>
                         <a href="/case-studies/pathway.html" class="project-thumbnail">
                             <img src="./content/pathway/pathway-thumbnail.png" alt="Pathway screen mockups">
                         </a>
+                        <a href="/case-studies/pathway.html" class="btn btn-large btn-primary">Learn more</a>
                     </li>
                 </ul>
             </div>
