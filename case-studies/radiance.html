@@ -12,13 +12,28 @@
     <header>
         <nav>
             <a class="logo" href="/" aria-label="home">&lt;JP&gt;</a>
-            <ol role="list">
+            <ol role="list" class="desktop-nav-links">
                 <li class="nav-list-item"><a href="/#about">About</a></li>
                 <li class="nav-list-item"><a href="/#projects">Projects</a></li>
                 <li class="nav-list-item"><a href="/#experience">Experience</a></li>
                 <li class="nav-list-item"><a href="/#contact">Contact</a></li>
             </ol>
-            <button class="btn"><i class="fas fa-file-download"></i><span>Resume</span></button>
+            <button class="btn desktop-nav-links"><i class="fas fa-file-download"></i><span>Resume</span></button>
+            <div class="mobile-nav-links">
+                <input type="checkbox" aria-label="Navbar toggle" id="nav-toggle" class="nav-toggle"></input>
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <span></span>
+                </label>
+                <aside class="nav-content" tabindex="1">
+                    <ol role="list">
+                        <li class="nav-list-item"><a href="/#about">About</a></li>
+                        <li class="nav-list-item"><a href="/#projects">Projects</a></li>
+                        <li class="nav-list-item"><a href="/#experience">Experience</a></li>
+                        <li class="nav-list-item"><a href="/#contact">Contact</a></li>
+                    </ol>
+                    <button class="btn"><i class="fas fa-file-download"></i><span>Resume</span></button>
+                </aside>
+            </div>
         </nav>
     </header>
     <main class="case-study">
@@ -177,5 +192,8 @@
             </div>
         </section>
     </main>
+
+    <script src='https://unpkg.com/focus-within-polyfill/dist/focus-within-polyfill.js'></script>
+    <script src="/app.js"></script>
 </body>
 </html>
