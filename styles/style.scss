@@ -16,7 +16,7 @@ $grey-4: #627D98;
 $grey-3: #486581;
 $grey-2: #243B53;
 $grey-1: #102A43;
-$breakpoint-tablet: 820px;
+$breakpoint-tablet: 900px;
 $breakpoint-phone: 640px;
 
 
@@ -553,8 +553,6 @@ section[id] {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(5, auto);
-  column-gap: 5rem;
-  grid-column-gap: 5rem;
   row-gap: 5rem;
   grid-row-gap: 5rem;
   margin-bottom: 15rem;
@@ -690,11 +688,50 @@ section[id] {
 
   &#pathway-project {
     margin-bottom: 10rem;
+
   }
 
-  &:last-child {
-    margin-bottom: 5rem;
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-rows: repeat(8, auto);
+    grid-template-columns: repeat(12, 1fr);
+    row-gap: 2.5rem;
+    grid-row-gap: 2.5rem;
+
+    header {
+      grid-column: 1 / 12;
+      grid-row: 1;
+      align-self: center;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .project-thumbnail {
+      grid-row: 2 / 6;
+      grid-column: 1 / 13;
+      margin-bottom: 2rem;
+      justify-self: center;
+    }
+
+    .project-description {
+      grid-column: 1 / 8;
+      grid-row: 6 / 9;
+    }
+
+    .project-skills {
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-start;
+      gap: 2rem;
+      grid-column: 8 / 13;
+      grid-row: 6 / 8;
+    }
+
+    .btn {
+      grid-column: 8 / 13;
+      grid-row: 8 / 9;
+    }
   }
+
 }
 
 #experience {
@@ -1122,6 +1159,12 @@ main.case-study {
       text-align: center;
     }
 
+    @media (max-width: $breakpoint-tablet) {
+      h3 {
+        font-size: 3rem;
+      }
+    }
+
     >p {
       max-width: 75%;
       align-self: flex-start;
@@ -1205,7 +1248,7 @@ main.case-study {
       column-gap: 2rem;
       grid-column-gap: 2rem;
       row-gap: 5rem;
-      grid-row-gap: 7.5rem;
+      grid-row-gap: 5rem;
 
       .change-description {
         grid-column: 2/4;
@@ -1278,10 +1321,40 @@ main.case-study {
         column-gap: 2rem;
         grid-column-gap: 2rem;
 
-        img {
-          grid-column: span 1;
+        h3 {
+          grid-column: span 2;
+          grid-row: 3;
+          color: $grey-1;
+          font-size: 3rem;
+          margin-top: 5rem;
         }
 
+        img {
+          grid-column: span 1;
+          grid-row: 4;
+        }
+
+        @media (max-width: $breakpoint-tablet) {
+          h3 {
+            grid-column: span 4;
+            justify-self: center;
+            &.before {
+              grid-row: 3;
+            }
+            &.after {
+              grid-row: 5;
+            }
+          }
+          img {
+            grid-column: span 2;
+            &.before {
+              grid-row: 4;
+            }
+            &.after {
+              grid-row: 6;
+            }
+          }
+        }
       }
     }
   }
