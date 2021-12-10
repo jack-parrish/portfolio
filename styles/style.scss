@@ -194,7 +194,6 @@ nav {
       }
     }
   }
-
   .mobile-nav-links {
     display: none;
   }
@@ -231,9 +230,11 @@ nav {
       visibility: hidden;
       flex-direction: column;
       justify-content: space-evenly;
+      align-items: center;
 
       ol {
         flex-direction: column;
+        gap: 2rem;
       }
     }
 
@@ -293,10 +294,6 @@ nav {
         display: none;
       }
     }
-
-    
-
-
   }
 }
 
@@ -338,6 +335,11 @@ button {
 @media (max-width: $breakpoint-tablet) {
   .btn-large {
     font-size: 1.8rem;
+  }
+}
+@media (max-width: $breakpoint-phone) {
+  .btn-large {
+    font-size: 1.6rem;
   }
 }
 
@@ -390,9 +392,18 @@ main {
 
     .subtitle {
       font-size: 4rem;
-      margin-top: 1rem;
+      margin: 1rem 0;
       color: $grey-9;
       width: 100%;
+    }
+
+    
+    p {
+      width: 60%;
+    }
+    
+    a {
+      margin-top: 4rem;
     }
 
     @media (max-width: $breakpoint-tablet) {
@@ -401,13 +412,16 @@ main {
       }
     }
 
-    p {
-      width: 60%;
+    @media screen and (max-width: $breakpoint-phone) {
+      .subtitle {
+        font-size: 2.2rem;
+        margin-bottom: 3rem;
+      }
+      p {
+        width: unset;
+      }
     }
-
-    a {
-      margin-top: 4rem;
-    }
+    
   }
 
   .home {
@@ -423,6 +437,11 @@ main {
     padding: 0 5rem;
   }
 }
+@media (max-width: $breakpoint-phone) {
+  main {
+    padding: 0 2.5rem;
+  }
+}
 
 p,ol {
   margin-top: 2rem;
@@ -436,6 +455,11 @@ p,ol {
     font-size: 1.8rem;
   }
 }
+@media screen and (max-width: $breakpoint-phone) {
+  p,ol {
+    font-size: 1.6rem;
+  }
+}
 
 .large-heading {
   font-size: 9rem;
@@ -444,6 +468,11 @@ p,ol {
 @media (max-width: $breakpoint-tablet) {
   .large-heading {
     font-size: 6rem;
+  }
+}
+@media (max-width: $breakpoint-phone) {
+  .large-heading {
+    font-size: 5rem;
   }
 }
 
@@ -487,6 +516,13 @@ p,ol {
     }
   }
 }
+@media screen and (max-width: $breakpoint-phone) {
+  .heading-with-number {
+    &::after {
+      width: 10rem;
+    }
+  }
+}
 
 section[id] {
 
@@ -502,18 +538,40 @@ section[id] {
 
   .about-container {
     display: flex;
+    gap: 2.5rem;
   
     .about-text {
       flex: 3;
     }
     .about-image {
-      margin-left: 5rem;
       flex: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       
       img {
         border-radius: 1rem;
         box-shadow: .1rem .2rem .2rem $grey-2;
         margin-bottom: 5rem;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-phone) {
+    .about-container {
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: 2.5rem;
+
+      .about-image {
+        img {
+          max-width: 75%;
+          margin-bottom: 0;
+        }
+
+        .btn {
+          display: none;
+        }
       }
     }
   }
@@ -546,6 +604,11 @@ section[id] {
 
   ul {
     padding: 0;
+  }
+}
+@media screen and (max-width: $breakpoint-phone) {
+  .projects-container {
+    padding: 0 2rem;
   }
 }
 
@@ -594,20 +657,6 @@ section[id] {
     } 
   }
 
-// .project-filter {
-//   display: flex;
-//   align-items: center;
-
-//   label {
-//     font-size: 1.6rem;
-//     margin-right: 1rem;
-//   }
-//   select {
-//     font-size: 1.6rem;
-//     padding: 1rem;
-//   }
-// }
-
   .project-description {
     grid-column: 6 / 11;
     grid-row: 2 / 4;
@@ -643,46 +692,51 @@ section[id] {
   }
   
   &#minigame-madness {
-    grid-template-rows: repeat(8, auto);
-    grid-template-columns: repeat(12, 1fr);
-    row-gap: 2.5rem;
-    grid-row-gap: 2.5rem;
 
-    header {
-      grid-column: 1 / 12;
-      grid-row: 1;
-      align-self: center;
-      align-items: flex-start;
-      text-align: left;
+    @media screen and (min-width: $breakpoint-phone) {      
+      grid-template-rows: repeat(8, auto);
+      grid-template-columns: repeat(12, 1fr);
+      row-gap: 2.5rem;
+      grid-row-gap: 2.5rem;
+  
+      header {
+        grid-column: 1 / 12;
+        grid-row: 1;
+        align-self: center;
+        align-items: flex-start;
+        text-align: left;
+      }
+  
+      .project-thumbnail {
+        grid-row: 2 / 6;
+        grid-column: 2 / 12;
+        margin-bottom: 2rem;
+  
+      }
+      
+      .project-description {
+        grid-column: 1 / 8;
+        grid-row: 6 / 9;
+      }
+      
+      .project-skills {
+        flex-direction: column;
+        align-items: flex-end;
+        grid-column: 8 / 13;
+        grid-row: 6 / 8;
+      }
+      
+      .btn {
+        grid-column: 8 / 13;
+        grid-row: 8 / 9;
+      }
     }
 
-    .project-thumbnail {
-      grid-row: 2 / 6;
-      grid-column: 2 / 12;
-      margin-bottom: 2rem;
-
-    }
+    
     @media (max-width: $breakpoint-tablet) {
       .project-thumbnail {
         grid-column: 1/13;
       }
-    }
-
-    .project-description {
-      grid-column: 1 / 8;
-      grid-row: 6 / 9;
-    }
-
-    .project-skills {
-      flex-direction: column;
-      align-items: flex-end;
-      grid-column: 8 / 13;
-      grid-row: 6 / 8;
-    }
-
-    .btn {
-      grid-column: 8 / 13;
-      grid-row: 8 / 9;
     }
   }
 
@@ -732,6 +786,28 @@ section[id] {
     }
   }
 
+  @media (max-width: $breakpoint-phone) {
+    .project-description {
+      grid-column: 1/13;
+      grid-row: 6;
+    }
+    .project-skills {
+      grid-row: 8/9;
+      grid-column: 1/6;
+      align-items: flex-start;
+      justify-content: flex-end;
+    }
+    .btn {
+      align-self: end;
+    }
+
+    &#minigame-madness {
+      .project-thumbnail img {
+        max-height: initial;
+      }
+    }
+  }
+
 }
 
 #experience {
@@ -744,10 +820,7 @@ section[id] {
 
 .job {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: 10rem max-content;
-  column-gap: 5rem;
-  grid-column-gap: 5rem;
+  grid-template-columns: repeat(8, minmax(0,1fr));
   margin-bottom: 5rem;
 
   h3 {
@@ -756,6 +829,7 @@ section[id] {
     align-self: center;
     font-size: 3rem;
     color: $grey-9;
+    margin-right: 2.5rem;
   }
 
   .duration {
@@ -791,6 +865,23 @@ section[id] {
     }
     ul {
       font-size: 1.8rem;
+    }
+  }
+  
+  @media screen and (max-width: $breakpoint-phone) {
+    h3 {
+      font-size: 2.2rem;
+      grid-column: 1/9;
+    }
+    .duration {
+      grid-column: 1/9;
+      grid-row: 2;
+      align-self: start;
+      justify-self: start;
+    }
+    ul {
+      grid-column: 1/9;
+      grid-row: 3;
     }
   }
 }
@@ -1494,7 +1585,18 @@ main.case-study {
   grid-column: span 3;
 }
 
-@media (max-width: $breakpoint-phone) {
-  
+.mobile-only {
+  display: none;
+
+  @media (max-width: $breakpoint-phone) {
+    display: block;
+  }
+}
+.hide-on-mobile {
+  display: block;
+
+  @media (max-width: $breakpoint-phone) {
+    display: none;
+  }
 }
  
