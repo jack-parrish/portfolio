@@ -200,7 +200,7 @@ nav {
 }
 @media (max-width: $breakpoint-tablet) {
   header nav {
-    margin: 1.5rem auto;
+    margin: 0 auto;
     .desktop-nav-links {
       display: none;
     }
@@ -429,6 +429,10 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+
+    @media screen and (max-width: $breakpoint-phone) {
+      justify-content: flex-end;
+    }
   }
 }
 
@@ -882,6 +886,7 @@ section[id] {
     ul {
       grid-column: 1/9;
       grid-row: 3;
+      font-size: 1.6rem;
     }
   }
 }
@@ -930,34 +935,59 @@ main.case-study {
       flex-shrink: .4;
       margin-right: 2.5rem;
 
-          .large-heading {
-            color: $grey-1;
-          }
-          .subtitle {
-            color: $grey-1;
-            max-width: 80%;
-          }
-          .project-metadata {
-            font-size: 1.8rem;
-            padding: 0;
-            align-self: stretch;
-            
-            li {
-              padding: 1rem 0;
+      .large-heading {
+        color: $grey-1;
+      }
+      .subtitle {
+        color: $grey-1;
+        max-width: 80%;
+      }
+      .project-metadata {
+        font-size: 1.8rem;
+        padding: 0;
+        align-self: stretch;
+        
+        li {
+          padding: 1rem 0;
 
-              p {
-                margin: 0;
-                color: $grey-1;
-                font-size: 2.2rem;
-                width: 100%;
-              }
-            }
+          p {
+            margin: 0;
+            color: $grey-1;
+            font-size: 2.2rem;
+            width: 100%;
           }
-          .btn {
-            margin-top: 1rem;
-            width: 50%;
-          }
+        }
+      }
+      .btn {
+        margin-top: 1rem;
+        width: 50%;
+      }
     }
+
+    @media screen and (max-width: $breakpoint-phone) {
+      flex-direction: column;
+      gap: 5rem;
+
+
+      .project-info-container {
+        margin-right: 0;
+        justify-content: flex-start;
+
+        .subtitle {
+          max-width: unset;
+          margin-bottom: 0;
+        }
+
+        .project-metadata {
+          font-size: 1.4rem;
+  
+          li p {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+
     img {
       align-self: center;
       max-height: 80vh;
@@ -975,6 +1005,9 @@ main.case-study {
         img {
           max-width: 100%;
         }
+      }
+      @media screen and (max-width: $breakpoint-phone) {
+        flex-flow: column;
       }
     }
   }
@@ -998,6 +1031,9 @@ main.case-study {
       h2::before {
         height: 5rem;
       }
+      &::before {
+        height: 5rem;
+      }
     }
 
     @media (max-width: $breakpoint-tablet) {
@@ -1005,14 +1041,28 @@ main.case-study {
         font-size: 2.2rem;
       }
     }
+
+    @media screen and (max-width: $breakpoint-phone) {
+      h2 {
+        font-size: 3rem;
+      }
+      h3 {
+        font-size: 2.2rem;
+      }
+      
+      p {
+        font-size: 1.6rem;
+        margin-top: 0;
+      }
+
+
+    }
   }
 
   #background {
     text-align: center;
     align-items: center;
     max-width: 90rem;
-    row-gap: 5rem;
-    grid-row-gap: 5rem;
   }
 
   #research {
@@ -1022,14 +1072,10 @@ main.case-study {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 0;
-
-    * {
-      margin-bottom: 3rem;
-    }
+    gap: 3rem;
 
     img {
-      margin-bottom: 5rem;
+      margin-bottom: 2rem;
       border-radius: 2rem;
       border: solid 1px $grey-1;
       box-shadow: .1rem .4rem .4rem $grey-4;
@@ -1081,24 +1127,61 @@ main.case-study {
           padding: 1.5rem 3.5rem 1.5rem 3.5rem;
           border-radius: 50%;
           font-size: 4rem;
+          background-color: $background-color;
+          color: $primary-color;
         }
-        
-        &:first-child .counter {
-          background-color: #1992d4;
-          color: #e3f8ff;
-        }
-        &:nth-child(2) .counter {
+      }
+    }
 
-          background-color: #f35627;
-          color: #ffe8d9;
+    @media screen and (max-width: $breakpoint-tablet) {
+      ol {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, minmax(0,1fr));
+        justify-items: start;
+        row-gap: 5rem;
+
+        li {
+          font-size: 1.6rem;
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+          grid-template-rows: repeat(2, 1fr);
+          column-gap: 2.5rem;
+          align-items: center;
+          justify-items: center;
+          padding: 0;
+          
+  
+          .counter {
+            font-size: 2.4rem;
+            padding: 1.5rem 2.6rem 1.5rem 2.8rem;
+            grid-column: 1;
+            grid-row: 1;
+          }
+
+          p {
+            grid-column: 1;
+            grid-row: 2;
+            margin: 0;
+            font-size: 2.2rem;
+          }
+
+          p:last-child {
+            text-align: right;
+            align-self: start;
+            grid-column: 2;
+            grid-row: span 2;
+          }
         }
-        &:nth-child(3) .counter {
-          background-color: #048271;
-          color: #f0fcf9;
-        }
-        &:last-child .counter {
-          background-color: #7A0ECC;
-          color: #F2EBFE;
+      }
+    }
+    @media screen and (max-width: $breakpoint-phone) {
+      ol {
+        li {
+          font-size: 1.6rem;
+
+          p {
+            font-size: 1.6rem;
+          }
         }
       }
     }
@@ -1111,6 +1194,15 @@ main.case-study {
         align-self: center;
         max-width: 90%;
       }
+
+      @media screen and (max-width: $breakpoint-phone) {
+        img {
+          max-width: 80%;
+        }
+        .persona {
+          max-width: 100%;
+        }
+      }
     }
   }
 
@@ -1121,6 +1213,7 @@ main.case-study {
     justify-content: space-evenly;
     align-items: center;
     text-align: left;
+    gap: 5rem;
 
     h2 {
       align-self: flex-start;
@@ -1128,7 +1221,6 @@ main.case-study {
 
     p {
       max-width: 75%;
-      margin-bottom: 5rem;
       align-self: flex-start;
     }
 
@@ -1147,6 +1239,16 @@ main.case-study {
     @media (max-width: $breakpoint-tablet) {
       img {
         max-width: 90%;
+      }
+    }
+    @media screen and (max-width: $breakpoint-phone) {
+      p {
+        max-width: 100%;
+        align-self: center;
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
       }
     }
   }
@@ -1200,13 +1302,32 @@ main.case-study {
           background-color: #048271;
           color: #f0fcf9;
         }
+
+      }
+      @media screen and (max-width: $breakpoint-phone) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, minmax(0,1fr));
+        justify-items: start;
+        row-gap: 2.5rem;
+
+        li {
+          font-size: 1.6rem;
+          display: flex;
+          align-items: center;
+          gap: 2.5rem;
+  
+          .counter {
+            font-size: 2.4rem;
+            padding: 1.5rem 2.6rem 1.5rem 2.8rem;
+          }
+        }
       }
     }
 
     .lo-fi-wireframes {
       img {
-        border: 2px solid $grey-1;
-        box-shadow: .1rem .4rem .4rem $grey-4;
+        border: 1px solid $grey-1;
+        box-shadow: .1rem .2rem .2rem $grey-3;
         max-width: 75%;
       }
 
@@ -1228,6 +1349,26 @@ main.case-study {
         .digital-wireframes {
           max-height: 75vh;
           border-radius: 2rem;
+        }
+      }
+
+      @media screen and (max-width: $breakpoint-tablet) {
+
+        img {
+          max-width: 100%;
+        }
+        
+        grid-auto-flow: row;
+        row-gap: 5rem;
+      }
+
+      @media screen and (max-width: $breakpoint-phone) {
+        &.pathway-wireframe-container {
+          grid-template-columns: 1fr;
+
+          .paper-wireframes {
+            grid-column: unset;
+          }
         }
       }
     }
@@ -1256,6 +1397,12 @@ main.case-study {
       }
     }
 
+    @media screen and (max-width: $breakpoint-phone) {
+      h3 {
+        font-size: 2.4rem;
+      }
+    }
+
     >p {
       max-width: 75%;
       align-self: flex-start;
@@ -1267,16 +1414,26 @@ main.case-study {
         max-width: 85%;
       }
     }
+    @media screen and (max-width: $breakpoint-phone) {
+      >p {
+        max-width: 100%;
+        align-self: inherit;
+        text-align: center;
+      }
+    }
 
     .study-parameters {
 
       display: flex;
       flex-direction: column;
       align-items: center;
+      gap: 2rem;
 
       ul {
         display: grid;
         grid-template-columns: repeat(4, minmax(0,1fr));
+        row-gap: 2rem;
+        column-gap: 2.5rem;
         justify-items: center;
         justify-content: space-between;
         text-align: center;
@@ -1284,10 +1441,23 @@ main.case-study {
         margin-bottom: 5rem;
 
         li {
-          padding: 0 2rem;
-
           p:last-child {
             font-size: 2.2rem;
+          }
+        }
+      }
+
+      @media screen and (max-width: $breakpoint-phone) {
+        ul {
+          grid-template-columns: repeat(2, minmax(0,1fr));
+
+          li p {
+            &:first-child {
+              font-size: 2rem;
+            }
+            &:last-child {
+              font-size: 1.6rem;
+            }
           }
         }
       }
@@ -1312,6 +1482,31 @@ main.case-study {
             max-width: 90%;
           }
         }
+      }
+    }
+
+    @media screen and (max-width: $breakpoint-phone) {
+      img {
+        max-width: 100%;
+      }
+      .insights {
+        h3 {
+          padding: 2.5rem;
+        }
+        ul {
+          grid-template-columns: 1fr;
+          justify-items: center;
+          row-gap: 2.5rem;
+
+          li {
+            padding: 0;
+
+            p {
+              max-width: 100%;
+            }
+          }
+        }
+
       }
     }
   }
@@ -1347,12 +1542,7 @@ main.case-study {
         text-align: center;
       }
 
-      @media (max-width: $breakpoint-tablet) {
-        .change-description {
-          grid-column: 1/5;
-        }
-      }
-
+      
       .change-list {
         grid-column: 1/5;
         display: grid;
@@ -1360,32 +1550,32 @@ main.case-study {
         text-align: center;
         justify-items: center;
         padding: 0;
-  
+        
         li {
           padding: 0 2rem;
-
+          
           p {
             max-width: 90%;
           }
         }
       }
-
+      
       img {
         max-width: 75%;
         border: 2px solid $grey-1;
         box-shadow: .1rem .4rem .4rem $grey-4;
-
+        
         &.no-border {
           border: none;
           box-shadow: none;
         }
-
+        
         &.img-tall {
           max-width: 100%;
           max-height: 80vh;
         }
       }
-
+      
       .before {
         grid-column: 1/3;
       }
@@ -1393,6 +1583,23 @@ main.case-study {
         grid-column: 3/5;
       }
 
+      @media (max-width: $breakpoint-tablet) {
+        .change-description {
+          grid-column: 1/5;
+        }
+        img {
+          max-width: 100%;
+        }
+      }
+
+      @media screen and (max-width: $breakpoint-phone) {
+        grid-template-columns: 1fr;
+
+        .change-description,.before,.after {
+          grid-column: 1;
+        }
+      }
+      
       &.alt-layout {
         grid-template-columns: repeat(8, minmax(0,1fr));
 
@@ -1404,6 +1611,20 @@ main.case-study {
           grid-column: 4/9;
           grid-row: 1/3;
           justify-self: end;
+        }
+
+        @media screen and (max-width: $breakpoint-tablet) {
+          grid-template-columns: 1fr;
+
+          .change-description {
+            grid-column: unset;
+            grid-row: unset;
+          }
+          img {
+            grid-column: unset;
+            grid-row: unset;
+            justify-self: unset;
+          }
         }
       }
 
@@ -1446,6 +1667,32 @@ main.case-study {
             }
           }
         }
+
+        @media screen and (max-width: $breakpoint-phone) {
+          grid-template-columns: 1fr;
+
+          .change-list {
+            grid-column: 1;
+            grid-template-columns: 1fr;
+            row-gap: 2.5rem;
+
+            li p {
+              max-width: unset;
+            }
+          }
+
+          h3,img {
+            grid-column: 1;
+            font-size: 2.2rem;
+            
+            &.before {
+              grid-row: unset;
+            }
+            &.after {
+              grid-row: unset;
+            }
+          }
+        }
       }
     }
   }
@@ -1470,28 +1717,21 @@ main.case-study {
 
   #conclusion {
     max-width: 110rem;
-    row-gap: 10rem;
-    grid-row-gap: 10rem;
 
     .takeaways {
       display: grid;
       grid-template-columns: repeat(2, minmax(0,1fr));
       column-gap: 5rem;
       grid-column-gap: 5rem;
+      margin-bottom: 5rem;
 
-      .learnings {
-        ul {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          align-items: flex-start;
-          gap: 2rem;
-          padding: 0;
-        }
+      h3,p {
+        padding: 1rem 0;
       }
     }
 
     .next-steps {
+      margin-bottom: 5rem;
       ol {
         align-self: center;
         padding: 0;
@@ -1515,6 +1755,32 @@ main.case-study {
             color: $primary-color;
           }
         }
+
+        @media screen and (max-width: $breakpoint-phone) {
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(3, minmax(0,1fr));
+          justify-items: start;
+          row-gap: 2.5rem;
+
+          li {
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+    
+            .counter {
+              font-size: 2.4rem;
+              padding: 1.5rem 2.6rem 1.5rem 2.8rem;
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: $breakpoint-phone) {
+      .takeaways {
+        grid-template-columns: 1fr;
+        row-gap: 2.5rem;
       }
     }
   }
@@ -1529,6 +1795,8 @@ main.case-study {
 
     p {
       color: $grey-9;
+      padding: 2rem;
+      text-align: center;
     }
 
     div {
@@ -1596,6 +1864,20 @@ main.case-study {
   display: block;
 
   @media (max-width: $breakpoint-phone) {
+    display: none;
+  }
+}
+.tablet-only {
+  display: none;
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    display: block;
+  }
+}
+.hide-on-tablet {
+  display: block;
+
+  @media screen and (max-width: $breakpoint-tablet) {
     display: none;
   }
 }
