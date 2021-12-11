@@ -1,5 +1,6 @@
 const navBarLinks = document.getElementsByClassName("mobile-nav-links")[0];
 const navCheckbox = document.getElementsByClassName("nav-toggle")[0];
+const mainHeader = document.getElementById("main-header");
 
 navBarLinks.addEventListener("focusout", function() {
     const container = document.getElementsByClassName("mobile-nav-links")[0];
@@ -24,5 +25,33 @@ document.addEventListener("click", function(e) {
             e.preventDefault();
         }
     }
-
 });
+
+//Hide navbar when scrolling down, add it back when scrolling up
+let didScroll;
+let lastKnownScrollPosition = 0;
+document.addEventListener("scroll", function() {
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        if (window.scrollY > lastKnownScrollPosition) {
+            scrolledDown();
+            lastKnownScrollPosition = window.scrollY;
+            didScroll = false;
+        }
+        else if (window.scrollY < lastKnownScrollPosition) {
+            scrolledUp();
+            lastKnownScrollPosition = window.scrollY;
+            didScroll = false;
+        }
+    }
+}, 250); 
+
+function scrolledDown() {
+    mainHeader.classList.add("hidden");
+}
+function scrolledUp() {
+    mainHeader.classList.remove("hidden");
+}

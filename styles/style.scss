@@ -18,6 +18,8 @@ $grey-2: #243B53;
 $grey-1: #102A43;
 $breakpoint-tablet: 900px;
 $breakpoint-phone: 640px;
+$header-height: 93px;
+$header-height-mobile: 63px;
 
 
 
@@ -124,7 +126,7 @@ header {
   backdrop-filter: blur(1rem);
   width: 100%;
   z-index: 11;
-  // box-shadow: 0 1rem 1rem #081425;
+  transition: top 0.25s ease-in-out;
 
   nav {
     display: flex;
@@ -132,6 +134,14 @@ header {
     align-items: center;
     max-width: 95%;
     margin: 0 auto;
+  }
+
+  &.hidden {
+    top: -$header-height;
+
+    @media screen and (max-width: $breakpoint-tablet) {
+      top: -$header-height-mobile;
+    }
   }
 }
 
@@ -145,6 +155,7 @@ nav {
     color: $primary-color;
     text-decoration: none;
     line-height: 6rem;
+    margin-bottom: 1rem;
   }
 
   ol {
@@ -200,7 +211,7 @@ nav {
 }
 @media (max-width: $breakpoint-tablet) {
   header nav {
-    margin: 0 auto;
+    margin: 1.5rem auto;
     .desktop-nav-links {
       display: none;
     }
@@ -292,6 +303,15 @@ nav {
       }
       &::after {
         display: none;
+      }
+    }
+  }
+  @media screen and (max-width: $breakpoint-phone) {
+    header nav {
+      margin: 0 auto;
+
+      .logo {
+        font-size: 5rem;
       }
     }
   }
@@ -430,7 +450,7 @@ main {
     justify-content: center;
     align-items: flex-start;
 
-    @media screen and (max-width: $breakpoint-phone) {
+    @media screen and (max-width: $breakpoint-phone) and (max-height: 600px) {
       justify-content: flex-end;
     }
   }
@@ -533,7 +553,7 @@ section[id] {
   &::before {
     content: '';
     display: block;
-    height: 10rem;
+    height: 5rem;
   }
 }
 
@@ -826,6 +846,7 @@ section[id] {
   display: grid;
   grid-template-columns: repeat(8, minmax(0,1fr));
   margin-bottom: 5rem;
+  padding: 0 2.5rem;
 
   h3 {
     grid-column: 1 / 6;
@@ -1398,6 +1419,10 @@ main.case-study {
     }
 
     @media screen and (max-width: $breakpoint-phone) {
+      h2 {
+        align-self: center;
+      }
+      
       h3 {
         font-size: 2.4rem;
       }
@@ -1758,9 +1783,8 @@ main.case-study {
 
         @media screen and (max-width: $breakpoint-phone) {
           grid-template-columns: 1fr;
-          grid-template-rows: repeat(3, minmax(0,1fr));
           justify-items: start;
-          row-gap: 2.5rem;
+          row-gap: 4rem;
 
           li {
             font-size: 1.6rem;
