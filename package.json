@@ -1,5 +1,11 @@
 {
+  "scripts": {
+    "build": "sass --style=compressed --watch styles/scss:styles/css"
+  },
   "dependencies": {
-    "focus-within-polyfill": "^5.2.1"
+    
+  },
+  "devDependencies": {
+    "sass": "^1.45.0"
   }
 }
