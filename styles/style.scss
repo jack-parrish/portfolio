@@ -118,6 +118,7 @@ body {
     overflow-x: hidden;
 }
 
+//Begin Navbar Styling
 header {
   position: fixed;
   top: 0px;
@@ -317,6 +318,7 @@ nav {
   }
 }
 
+//Button Styling
 button {
   cursor: pointer;
 }
@@ -385,6 +387,7 @@ button {
   outline-offset: .3rem;
 }
 
+//Start main content style
 main {
   min-height: 100vh;
   width: 100%;
@@ -399,6 +402,7 @@ main {
     margin-bottom: 20rem;
   }
 
+  //Hero landing page
   .hero {
     min-height: 100vh;
     max-width: 110rem;
@@ -504,6 +508,7 @@ p,ol {
   font-family: 'Montserrat Alternates', Arial;
 }
 
+
 .heading-with-number {
   font-size: 3.5rem;
   color: $grey-9;
@@ -556,6 +561,8 @@ section[id] {
     height: 5rem;
   }
 }
+
+// START HOME PAGE STYLES
 
 #about {
   max-width: 90rem;
@@ -932,9 +939,10 @@ section[id] {
     width: 30rem;
   }
 }
+// END HOME PAGE STYLES
 
 
-//Case Study Page Styling
+//START CASE STUDY STYLING
 main.case-study {
 
   section:last-child {
@@ -1422,7 +1430,7 @@ main.case-study {
       h2 {
         align-self: center;
       }
-      
+
       h3 {
         font-size: 2.4rem;
       }
@@ -1831,6 +1839,9 @@ main.case-study {
   }
 }
 
+// END CASE STUDY STYLES
+
+//UTILITY CLASSES
 .heading {
   margin: 3rem 0;
   font-size: 3rem;
