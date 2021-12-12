@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "sass --style=compressed styles/style.scss:styles/style.css"
+    "build": "sass /styles/style.scss /styles/style.css --style=compressed"
   },
   "dependencies": {
     
