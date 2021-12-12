@@ -36,7 +36,7 @@ document.addEventListener("scroll", function() {
 
 setInterval(function() {
     if (didScroll) {
-        if (window.scrollY > lastKnownScrollPosition) {
+        if (window.scrollY > lastKnownScrollPosition && window.scrollY > 40) {
             scrolledDown();
             lastKnownScrollPosition = window.scrollY;
             didScroll = false;
