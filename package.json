@@ -3,7 +3,7 @@
     "build": "sass /styles/style.scss /styles/style.css --style=compressed"
   },
   "dependencies": {
-    
+     
   },
   "devDependencies": {
     "sass": "^1.45.0"
