@@ -566,6 +566,7 @@ section[id] {
 
 #about {
   max-width: 90rem;
+  margin-bottom: 5rem;
 
   .about-container {
     display: flex;
@@ -573,6 +574,9 @@ section[id] {
   
     .about-text {
       flex: 3;
+      p,ol {
+        margin-top: 4rem;
+      }
     }
     .about-image {
       flex: 2;
